@@ -20,8 +20,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "bouakazinfatma@gmail.com",
-    pass: "abmd natn imbk rcso",
+    user: "dhaouadieya05@gmail.com",
+    pass: "xfwg mejk utqm kwrp",
   },
 });
 // ********************************** REGISTER *****************************
@@ -54,7 +54,7 @@ userRouter.post("/register", registerRules(), Validation, async (req, res) => {
     // Send verification email
     const verificationUrl = `http://localhost:3000/verify-account/${activationToken}`;
     const mailOptions = {
-      from: "bouakazinfatma@gmail.com",
+      from: "dhaouadieya05@gmail.com",
       to: email,
       subject: "Verify Account",
       html: `
@@ -156,7 +156,7 @@ userRouter.post("/addInstructor", async (req, res) => {
     newUser.isActivated = true;
     const result = await newUser.save();
     const mailOptions = {
-      from: "bouakazinfatma@gmail.com",
+      from: "dhaouadieya05@gmail.com",
       to: email,
       subject: "Instructor Invitation",
       html: `
@@ -367,7 +367,7 @@ userRouter.post("/forgot-password", async (req, res) => {
     // Send email to the user with the reset link containing the token
     const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
     const mailOptions = {
-      from: "bouakazinfatma@gmail.com",
+      from: "dhaouadieya05@gmail.com",
       to: email,
       subject: "Reset Password",
 

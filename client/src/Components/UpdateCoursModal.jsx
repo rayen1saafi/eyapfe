@@ -28,9 +28,9 @@ const UpdateCoursModal = ({ el,setUpdatecoursId, setopenUpdateModale, reloadPage
         try {
           const formData = new FormData();
           formData.append("file", file);
-          formData.append("upload_preset", "fatmabouakazine");
+          formData.append("upload_preset", "eyapfe");
     
-          const response = await axios.post("https://api.cloudinary.com/v1_1/dpu5n0ocs/upload", formData);
+          const response = await axios.post("https://api.cloudinary.com/v1_1/dp1w5pvs0/upload", formData);
           return response.data.secure_url;
         } catch (error) {
           console.error("Error uploading image:", error);

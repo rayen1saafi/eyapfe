@@ -39,9 +39,9 @@ const Test = () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "fatmabouakazine");
+      formData.append("upload_preset", "eyapfe");
 
-      const response = await axios.post("https://api.cloudinary.com/v1_1/dpu5n0ocs/upload", formData);
+      const response = await axios.post("https://api.cloudinary.com/v1_1/dp1w5pvs0/upload", formData);
       const fileUrl = response.data.secure_url;
       setFileContent({ ...fileContent, file_type: fileUrl }); // Set Cloudinary URL
     } catch (error) {
