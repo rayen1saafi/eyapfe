@@ -1,0 +1,40 @@
+.contact-inst {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-inst img {
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  border: 0.5px solid rgba(128, 128, 128, 0.667);
+}
+.contact-inst h3 span {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.contact-inst p {
+  width: 80%;
+  text-align: center;
+}
+.contact-inst svg {
+  fill: #0175cd;
+  width: 20px;
+}
+.cont-i-cours-student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.contact-inst-social {
+  display: flex;
+  gap: 20px;
+}
+.contact-inst-social svg {
+  height: 25px;
+}

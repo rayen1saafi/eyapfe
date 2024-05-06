@@ -1,0 +1,116 @@
+.dashbord-side-nav-bar{
+  display: flex;
+  align-items: start;
+  width: 100%;
+}
+.SideBar {
+  width: 18%;
+  height: 550px;
+  position: fixed;
+  top: 0;
+  padding: 30px 0 20px 0;
+  border-right: 1px solid rgba(128, 128, 128, 0.184);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  background-color: white;
+}
+.SideBar .content_side {
+  width: 90%;
+  padding-left: 8%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-left: 4px solid #ffffff;
+  transition: 0.5s all ease;
+
+
+}
+.SideBar .content_side:hover {
+  width: 90%;
+
+  border-left: 4px solid #0175cd;
+}
+.SideBar .content_side svg {
+  margin-right: 15px;
+  width: 18px;
+}
+.SideBar .content_button {
+  width: 90%;
+  padding-left: 8%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-left: 5px solid #ffffff;
+}
+.SideBar .content_button button {
+  width: 90%;
+  height: 40px;
+  background-color: #0175cd;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 1s all ease;
+}
+.SideBar .content_button button:hover {
+  background-color: #0175cdb9;
+}
+
+.nav-dash {
+  width: 100%;
+  height: 70px;
+  background-color: #43B4BE ;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-dash-container{
+  width: 70%;
+  height: 95%;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-dash-container .nav-dash-input{
+  width: 40%;
+  height: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-dash-container .nav-dash-input input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.75);
+  outline: none;
+  border-radius: 5px;
+  padding-left: 25px;
+}
+.nav-dash-input svg{
+  position: absolute;
+  left: 10px;
+}
+.dashbord-admin-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+.dashbord-admin-img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.dashbord-admin-img h3{
+  color: white;
+}

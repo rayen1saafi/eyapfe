@@ -1,0 +1,107 @@
+.packs-card {
+  height: 300px;
+  /* width: 300px; */
+  /* background-color: green; */
+  box-shadow: 0px 3px 15px #0175cd6f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  max-width: 280px;
+  min-width: 260px;
+}
+.packs-card2 {
+  height: 300px;
+  /* width: 300px; */
+  /* background-color: green; */
+  background-color: #8dcbda;
+  box-shadow: 0px 3px 15px #0175cd6f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  max-width: 280px;
+}
+.packs-card:hover {
+  background-color: #8dcbda;
+}
+.packs-card img {
+  width: 90%;
+  height: 200px;
+}
+.packs-card a {
+  width: 90%;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.packs-card2 img {
+  width: 90%;
+  height: 200px;
+}
+.packs-card2 a {
+  width: 90%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.16);
+  padding: 20px 0;
+  cursor: pointer;
+}
+.packs-card-cours {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 7px 0;
+}
+.packs-card-cours span {
+  font-size: 15px;
+  font-weight: 800;
+  /* padding:15px 0; */
+}
+.course-days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.pack-days {
+  /* width: 90%; */
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+  align-items: center;
+  padding-top: 5px;
+}
+.p-c-num {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnwiting {
+  background-color: #8dcbda7f;
+  width: 80px;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.packs-card:hover .btnwiting{
+  background-color: #43B4BE;
+}
+.btnainscr {
+  background-color: #0175cd6f;
+  width: 80px;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.pack-title-inscri-btn {
+  /* background-color: red; */
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #43b4be77;
+}

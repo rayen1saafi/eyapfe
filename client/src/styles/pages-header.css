@@ -1,0 +1,24 @@
+.pages-header {
+  width: 100%;
+  height: 300px;
+  background-color: #f0f6fb;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.pages-header .shape_7 {
+  position: absolute;
+  left: 20%;
+}
+.pages-header .shape_8 {
+  position: absolute;
+  right: 20%;
+}
+.pages-header h3 {
+  font-size: 28px;
+}

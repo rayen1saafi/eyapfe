@@ -1,0 +1,233 @@
+.homecontainer {
+  width: 100%;
+  height: 600px;
+  background-color: #f0f6fb;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.homecontainer .img {
+  position: absolute;
+  bottom: -20px;
+  left: -30px;
+  width: 200px;
+  opacity: 40%;
+}
+.homecontainer .part1 {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.homecontainer .part1 .card1 {
+  position: absolute;
+  width: 280px;
+  background-color: #0175cd;
+  height: 280px;
+  border-radius: 15px;
+  left: 30px;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homecontainer .part1 .card1 img {
+  width: 100%;
+}
+.homecontainer .part1 .card2 {
+  position: absolute;
+  width: 230px;
+  background-color: #000000;
+  height: 230px;
+  border-radius: 15px;
+  right: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homecontainer .part1 .card2 img {
+  width: 100%;
+}
+.homecontainer .part1 .card3 {
+  position: absolute;
+  width: 160px;
+  background-color: #ffffff;
+  height: 90px;
+  border-radius: 15px;
+  right: 100px;
+  top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.homecontainer .part1 .card4 {
+  position: absolute;
+  width: 160px;
+  background-color: #ffffff;
+  height: 90px;
+  border-radius: 15px;
+  right: 10px;
+  top: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.homecontainer .part1 .card5 {
+  position: absolute;
+  width: 160px;
+  background-color: #ffffff;
+  height: 90px;
+  border-radius: 15px;
+  left: 120px;
+  bottom: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.homecontainer .part1 #card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homecontainer .part1 #card h2 {
+  color: #0175cd;
+}
+.homecontainer .part1 #card p {
+  color: gray;
+  font-weight: 600;
+}
+.homecontainer .part1 .circle {
+  width: 450px;
+  height: 450px;
+  border: 1.5px solid #0175cd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homecontainer .part1 .circle .sCircle {
+  width: 300px;
+  height: 300px;
+  border: 1.5px solid #0175cd;
+  border-radius: 50%;
+}
+.homecontainer .part2 {
+  width: 45%;
+  height: 80%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.homecontainer .part2 h4 {
+  color: #0175cd;
+}
+.homecontainer .part2 h1 {
+  width: 500px;
+}
+.homecontainer .part2 h1 span {
+  color: #0175cd;
+}
+.homecontainer .part2 p {
+  width: 550px;
+  text-align: justify;
+  margin-top: 25px;
+}
+.homecontainer .part2 button {
+  width: 120px;
+  height: 40px;
+  background-color: #0175cd;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+  transition: 1s all ease;
+}
+.homecontainer .part2 button:hover {
+  width: 120px;
+  height: 40px;
+  background-color: #6299c2;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+}
+.Homecourse {
+  width: 100%;
+  height: 450px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Homecourse .text {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.Homecourse .text h3 {
+  color: #0175cd;
+}
+.Homecourse .text h1 {
+  font-size: 33px;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+.Homecourse .text span {
+  color: #0175cd !important;
+}
+.Homecourse .text p {
+  margin-top: 20px;
+}
+.Homecourse .text button {
+  width: max-content;
+  padding: 0 30px;
+  height: 40px;
+  background-color: #0175cd;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 16px;
+  color: white;
+  transition: 1s all ease;
+}
+.Homecourse .text button:hover {
+  background-color: #6abdfd;
+}
+.Homecourse .container {
+  width: 55%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Homecourse .container .content {
+  width: 230px;
+  height: 160px;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Homecourse .container .content img {
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+.Homecourse .container .content h3 {
+  line-height: 40px;
+  color: #2a2929;
+}
+.Homecourse .container .content p {
+  color: #787878;
+}

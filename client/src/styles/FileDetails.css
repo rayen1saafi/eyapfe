@@ -1,0 +1,14 @@
+.filedetails {
+  width: 100%;
+  height: auto;
+}
+.detailsimg {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !;
+}
+.detailsimg .img {
+  width: 80%;
+}

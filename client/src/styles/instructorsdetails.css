@@ -1,0 +1,35 @@
+.cours-list-int-profile-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cours-list-int-profile {
+    max-width: 1100px;
+    min-width: 260px;
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(215px,1fr));
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+/* ----------- rating  */
+.rating-instruct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rating-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+.user-rate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+
+}

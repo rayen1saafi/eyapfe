@@ -1,0 +1,65 @@
+.cours-profile-card-container{
+    height: max-content;
+    border: 1px solid rgba(128, 128, 128, 0.402);
+    border-radius: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    gap: 10px;
+    /* background-color: red; */
+    background-color: #dde4ec;
+    width: 100%;
+    margin: 10px 0;
+}
+.cours-profile-card {
+width: 85%;
+background-color: #dde4ec;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.cours-profile-card img{
+    width: 10%;
+    border-radius: 50%;
+}
+.cours-profile-card-pack{
+    width: 90%;
+}
+.cours-profile-card-pack button{
+background-color: transparent;
+/* padding: 3%; */
+/* border: 1px solid rgba(128, 128, 128, 0.365); */
+border-radius: 3px;
+cursor:auto;
+
+}
+.cours-profile-card h4 {
+    color: rgba(0, 0, 0, 0.836);
+}
+.cours-profile-card a {
+    width: 90%;
+}
+.cours-profile-card-instructor {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.cours-profile-card-instructor img{
+    width: 40px;
+    border-radius: 50%;
+}
+.cours-profile-card-time-student{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(194, 8, 8) !;
+}
+.cours-profile-card-time-student p,.cours-profile-card-time-student svg{
+    color: gray;
+    fill: gray;
+}
