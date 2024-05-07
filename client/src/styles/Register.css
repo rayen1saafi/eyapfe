@@ -1,23 +1,28 @@
 .registerLogin_box {
-  width: 450px;
-  height: 550px;
+  width: 550px;
+  height: max-content;
+  padding-bottom: 20px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 2px solid #1665f9;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .registerLogin_box form {
-  width: 80%;
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.registerLogin_box  h1 {
+.registerLogin_box h1 {
   margin-bottom: 15px;
 }
-.registerLogin_box  h5 {
+.registerLogin_box h5 {
   margin-top: 7px;
   width: 100%;
   text-align: left;
@@ -29,30 +34,33 @@
   font-size: 13px;
   font-weight: 600;
 }
-.registerLogin_box  input {
-  width: 98%;
+.registerLogin_box input {
+  width: 100%;
   text-align: left;
-  margin-bottom: 7px;
   padding-left: 2%;
-  height: 35px;
+  height: 45px;
   border: none;
-  border-radius: 15px;
-  background-color: #f4f7f9;
+  border-radius: 3px;
+  background-color: #ffffff;
   font-weight: 600;
-  outline: none;
+
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(214, 214, 214);
+  outline-color: #0d5ff9;
 }
+
 .registerLogin_box form button {
   width: 100%;
   height: 38px;
-  background-color: #0175CD;
+  background-color: #0d5ff9;
   margin-top: 7px;
-  border-radius: 15px;
-  margin-bottom: 7px;
+  border-radius: 2px;
+  margin-bottom: 15px;
   color: white;
   font-weight: 600;
   transition: 1s all ease;
 }
-.registerLogin_box  button:hover {
+.registerLogin_box button:hover {
   background-color: rgb(199, 199, 199);
 }
-

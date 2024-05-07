@@ -99,9 +99,9 @@ const Login = ({ show, setShow }) => {
 
         <h5>
           You don't have an account?{" "}
-          <span style={{ color: "#0175CD" }} onClick={() => setShow(!show)}>
-            Sign up
-          </span>
+          <Link to="/Register">
+            <span style={{ color: "#0175CD" }}>Sign up</span>
+          </Link>
         </h5>
         <h5>
           Forgot your password?{" "}

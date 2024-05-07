@@ -69,7 +69,7 @@ const Register = ({ show, setShow }) => {
     <div className="registerLogin_box">
       <form onSubmit={(e) => e.preventDefault()}>
         <h1>Create an account</h1>
-        <label>
+        <label style={{ color: "gray" }}>
           Username: <label style={{ color: "red" }}>{usernameError}</label>
         </label>
         <input
@@ -82,7 +82,7 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
+        <label style={{ color: "gray" }}>
           FirstName: <label style={{ color: "red" }}>{firstnameError}</label>
         </label>
         <input
@@ -95,7 +95,7 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
+        <label style={{ color: "gray" }}>
           LastName: <label style={{ color: "red" }}>{lastnameError}</label>
         </label>
         <input
@@ -108,7 +108,7 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
+        <label style={{ color: "gray" }}>
           Email: <label style={{ color: "red" }}>{emailError}</label>
         </label>
         <input
@@ -121,7 +121,7 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
+        <label style={{ color: "gray" }}>
           Password: <label style={{ color: "red" }}>{passwordError}</label>
         </label>
         <input
@@ -143,9 +143,9 @@ const Register = ({ show, setShow }) => {
 
         <h5>
           You already have an account{" "}
-          <span style={{ color: "#0175CD" }} onClick={() => setShow(!show)}>
-            Sign in
-          </span>
+          <Link to="/Login">
+            <span style={{ color: "#0175CD" }}>Sign in</span>
+          </Link>
         </h5>
       </form>
     </div>
