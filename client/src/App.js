@@ -80,11 +80,11 @@ function App() {
 
   return (
     <div>
-      {location.pathname.includes("/dashbord") && user?.role == "admin" ? (
+      {location.pathname.includes("/dashbord") && user?.role == "admin" ? 
         <>
           <SideBar search={search} setSearch={setSearch} />
         </>
-      ) : null}
+       : <Navbar/>}
 
       <div className="app">
         <Routes>
