@@ -35,10 +35,12 @@ const Navbar = () => {
   return (
     <>
       <nav>
+        <div className="navbar-container">
         <div className="navbar-logo">
-          <img src="/assets/navbar-logo.png" alt="" />
+          <img src="/assets/navbarlogo.jpeg" alt="" />
         </div>
         <div className="navbar-content">
+          <div className="navbar-content-title">
           {user?.role === "admin" && (
             <Link to="/dashbord/learner">
               <span>
@@ -72,10 +74,21 @@ const Navbar = () => {
               Instructors <section></section>
             </span>
           </Link>
+          </div>
+        
+      
+          <div className="nav-log-regi">
           {!isAuth ? (
-            <Link to="/register">
-              <button className="navbar-sign">Sign Up</button>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:'20px'}}>
+              <Link to="/register">
+              <button style={{backgroundColor:"white",border:'1px solid #333333e8',color:"#333333e8"}} to="/login" className="navbar-sign">Sing up</button>
             </Link>
+
+            <Link >
+              <button className="navbar-sign">Login</button>
+            </Link>
+          
+            </div>
           ) : (
             <>
               <img
@@ -157,6 +170,9 @@ const Navbar = () => {
               </div>
             </>
           )}
+          </div>
+        </div>
+       
         </div>
       </nav>
     </>
