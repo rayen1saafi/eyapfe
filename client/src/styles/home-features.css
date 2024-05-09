@@ -1,0 +1,105 @@
+.home-features {
+    width: 100%;
+    height: 460px;
+    /* background-color: red; */
+    /* text-align: center; */
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-features h4 {
+    padding: 10px 0;
+    color: #f39a36;
+    font-size: 20px;
+}
+.home-features h2 {
+
+    font-size: 30px;
+}
+.home-features-cards{
+    width: 95%;
+    height: 80%;
+    background-color: #fff;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-features-card {
+    width: 22.5%;
+    height: 95%;
+    /* background-color: blue; */
+    position: relative;
+    border: 2px solid rgba(128, 128, 128, 0.218);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 8px;
+    transition: border-top-right-radius 0.5s, border 0.5s; 
+    cursor: default;
+}
+
+.home-features-card:hover {
+    border-top-right-radius: 60px;
+    border: 2px solid #f39a36;
+}
+
+.h-f-c-number {
+    width: 35px;
+    height: 37px;
+    background-color: #f39a36;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.h-f-c-content{
+margin-top: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 15px;
+}
+.h-f-c-content-img {
+    width: 80px;
+    height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+    background-color: #f39b3625;
+    transition: 0.5s;
+}
+.h-f-c-content-img svg {
+width: 60%;
+fill: #f39a36;
+}
+.home-features-card:hover .h-f-c-content-img{
+    background-color: #f39a36;
+}
+
+.home-features-card:hover .h-f-c-content-img svg {
+fill: #fff;
+
+}
+.h-f-c-content h3{
+font-size: 19px;
+
+}
+.h-f-c-content p{
+text-align: center;
+color: gray;
+width: 90%;
+}
+
+.about-home-mission{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.about-home-mission svg {
+    width: 50px;
+}
