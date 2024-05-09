@@ -45,28 +45,17 @@ const CoursCard = ({ el }) => {
   const instructor = users?.find((e) => e?._id === el?.instructor_id);
 
   return (
+    <>
     <div className="cours-card">
       <div className="cours-card-img">
         <img src={el?.cours_image} alt="" />
       </div>
       <div className="cours-card-pack">
-        <button>{packName?.nom}</button>
+        <h2>Pack Name : {packName?.nom}</h2>
       </div>
       <Link to={`/cours/coursesdetails/${el?._id}`}>
-        <h4>{el?.titre}</h4>
+        <h4 style={{paddingLeft:"3%",fontSize:"30px",marginBottom:"0"}}>{el?.titre}</h4>
       </Link>
-      {instructor && (
-        <div className="cours-card-instructor">
-          <img
-            style={{ width: "30px", height: "30px" }}
-            src={instructor?.user_img}
-            alt=""
-          />
-          <span>
-            {instructor?.nom} {instructor?.prenom}
-          </span>
-        </div>
-      )}
       <div className="cours-card-time-student">
         <div className="titre_student">
           <svg
@@ -102,7 +91,27 @@ const CoursCard = ({ el }) => {
           )}
         </>
       </div>
+      {instructor && (
+        <div className="cours-card-instructor">
+          <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+          <img
+            style={{ width: "30px", height: "30px" }}
+            src={instructor?.user_img}
+            alt=""
+          />
+          <span>
+            {instructor?.nom} {instructor?.prenom}
+          </span>
+          </div>
+          <span style={{color:"#f39a36"}} >
+            {instructor?.role} 
+          </span>
+        </div>
+      )}
+     
     </div>
+
+    </>
   );
 };
 
