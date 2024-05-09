@@ -1,9 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Login from "./Components/Login";
 import Profile from "./Pages/Profile";
-import Register from "./Components/Register";
+
 import PrivateRoute from "./routes/PriveteRoute";
 import { getusers, userCurrent } from "./redux/userSlice/userSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +12,6 @@ import Forgotpassword from "./Pages/Forgotpassword";
 import Reset_password from "./Pages/Reset_password";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import Registerlogin from "./Pages/Registerlogin";
 import Home from "./Pages/Home";
 import Instructors from "./Pages/Instructors";
 import InstructorsDetails from "./Pages/InstructorsDetails";
@@ -43,6 +41,8 @@ import { getMeet } from "./redux/MeetSlice/meetSlice.js";
 import Meet from "./Pages/Meet.jsx";
 import Contact from "./Pages/Contact.jsx";
 import About from "./Pages/About.jsx";
+import Registerpage from "./Pages/Registerpage.jsx";
+import LoginPage from "./Pages/LoginPage.jsx";
 
 // --------------------end importation------------------
 function App() {
@@ -80,19 +80,17 @@ function App() {
 
   return (
     <div>
-      {location.pathname.includes("/dashbord") && user?.role == "admin" ? (
+      {location.pathname.includes("/dashbord") && user?.role == "admin" ? 
         <>
           <SideBar search={search} setSearch={setSearch} />
         </>
-      ) : (
-        <Navbar />
-      )}
+       : <Navbar/>}
 
       <div className="app">
         <Routes>
           {/* home route */}
-          <Route path="/register" element={<Registerlogin />} />{" "}
-          {/* Register route */}
+          <Route path="/Register" element={<Registerpage />} />{" "}
+          <Route path="/Login" element={<LoginPage />} /> {/* Register route */}
           <Route path="/" element={<Home />} /> {/* Register route */}
           <Route
             path="/profile"

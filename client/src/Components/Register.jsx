@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { userRegister } from "../redux/userSlice/userSlice";
 import "../styles/Register.css";
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa6";
 const Register = ({ show, setShow }) => {
   const [register, setRegister] = useState({
     username: "",
@@ -16,6 +18,7 @@ const Register = ({ show, setShow }) => {
   const [lastnameError, setLastnameError] = useState("");
   const [firstnameError, setfirstnameError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -66,13 +69,19 @@ const Register = ({ show, setShow }) => {
   };
 
   return (
-    <div className="registerLogin_box">
-      <form onSubmit={(e) => e.preventDefault()}>
-        <h1>Create an account</h1>
-        <label>
-          Username: <label style={{ color: "red" }}>{usernameError}</label>
-        </label>
-        <input
+    <div className="register-main">
+        <div className="register-left">
+          <img src="/assets/login-img.png" alt="" />
+        </div>
+        <div className="register-right">
+          <div className="register-right-container">
+           
+            <div className="register-center">
+              <h2>Welcome to our website!</h2>
+              <p>Please enter your details</p>
+              <form onSubmit={(e) => e.preventDefault()}>
+              <label style={{ color: "red" }}>{usernameError}</label>
+              <input
           type="text"
           placeholder="Username"
           onChange={(e) =>
@@ -82,10 +91,8 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
-          FirstName: <label style={{ color: "red" }}>{firstnameError}</label>
-        </label>
-        <input
+        <label style={{ color: "red" }}>{firstnameError}</label>
+              <input
           type="text"
           placeholder="First Name"
           onChange={(e) =>
@@ -95,10 +102,8 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
-          LastName: <label style={{ color: "red" }}>{lastnameError}</label>
-        </label>
-        <input
+        <label style={{ color: "red" }}>{lastnameError}</label>
+              <input
           type="text"
           placeholder="Last Name"
           onChange={(e) =>
@@ -108,10 +113,8 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
-          Email: <label style={{ color: "red" }}>{emailError}</label>
-        </label>
-        <input
+        <label style={{ color: "red" }}>{emailError}</label>
+                 <input
           type="email"
           placeholder="Email"
           onChange={(e) =>
@@ -121,11 +124,10 @@ const Register = ({ show, setShow }) => {
             })
           }
         />
-        <label>
-          Password: <label style={{ color: "red" }}>{passwordError}</label>
-        </label>
-        <input
-          type="password"
+                <div className="pass-input-div">
+                <label style={{ color: "red" }}>{passwordError}</label>
+                  {showPassword ?          <input
+          type="text"
           placeholder="Password"
           onChange={(e) =>
             setRegister({
@@ -133,22 +135,49 @@ const Register = ({ show, setShow }) => {
               password: e.target.value,
             })
           }
-        />
-        <button
+        /> :         <input
+        type="password"
+        placeholder="Password"
+        onChange={(e) =>
+          setRegister({
+            ...register,
+            password: e.target.value,
+          })
+        }
+      />}
+        
+                  {showPassword ? (
+                    <FaEyeSlash
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  ) : (
+                    <FaEye
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  )}
+                </div>
+            
+                <div className="register-center-buttons">
+                <button
           className="submit"
           onClick={handleRegister} // Appel à la fonction handleRegister
         >
           Register
         </button>
+                </div>
+              </form>
+            </div>
 
-        <h5>
-          You already have an account{" "}
-          <span style={{ color: "#0175CD" }} onClick={() => setShow(!show)}>
-            Sign in
-          </span>
-        </h5>
-      </form>
-    </div>
+            <p className="login-bottom-p">
+              Already have an account? <Link to="/login">Login</Link>
+            </p>
+          </div>
+        </div>
+      </div>
   );
 };
 
