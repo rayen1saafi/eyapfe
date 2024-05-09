@@ -81,10 +81,10 @@ const Navbar = () => {
           {!isAuth ? (
             <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:'20px'}}>
               <Link to="/register">
-              <button style={{backgroundColor:"white",border:'1px solid #333333e8',color:"#333333e8"}} to="/login" className="navbar-sign">Sing up</button>
+              <button style={{backgroundColor:"white",border:'1px solid #333333e8',color:"#333333e8"}} to="/Login" className="navbar-sign">Sing up</button>
             </Link>
 
-            <Link >
+            <Link to="/login">
               <button className="navbar-sign">Login</button>
             </Link>
           

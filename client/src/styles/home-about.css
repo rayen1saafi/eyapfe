@@ -1,0 +1,67 @@
+.home-about{
+    width: 100%;
+    height: 700px;
+    /* background-color: red; */
+display: flex;
+align-items: start;
+justify-content: center;
+gap: 20px;
+    
+}
+.home-about-left{
+    width: 45%;
+    height: 90%;
+    /* background-color: blue; */
+}
+.home-about-right{
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+.home-about-right h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #f39a36;
+    display: block;
+    margin-bottom: 5px;
+}
+.home-about-right h3{
+    font-size: 35px;
+}
+.home-about-right p{
+    color: gray;
+}
+.about-home-mission{
+margin-bottom: 20px;
+}
+.a-h-misson-title-text {
+    /* margin-bottom: 20px; */
+}
+.a-h-misson-title-text h4{
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+.home-about-right button{
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    background-color: #f39a36;
+}
+.home-about-right button:hover{
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 40px;
+    color: #f39a36;
+    font-weight: 600;
+    background-color: #fff;
+    border: solid 1px #f39a36;
+}
