@@ -91,6 +91,7 @@
   background-color: #f39b3622;
   border: none;
   border-radius: 5px;
+  outline: none;
 }
 .contact .contactpart2 form button {
   width: 200px;
