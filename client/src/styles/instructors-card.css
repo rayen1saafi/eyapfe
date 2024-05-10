@@ -1,45 +1,63 @@
 .ins-card {
-    height: 350px;
+    height: 320px;
     position: relative;
     /* width: 300px; */
-    min-width: 43px;
+    min-width: 250px;
     max-width: 280px;
     border-radius: 20px;
     border: 1px solid rgba(128, 128, 128, 0.457);
     margin-bottom: 40px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
-.ins-card:hover .background-ins-card {
-    background: #43b4be2e;
-    background: linear-gradient(20deg,#43B4BE 0%, #43b4be70 30%, #86868620 100%);
-position: absolute;
+.ins-card:hover {
+    background-color: #f39b362c;
+}
+.ins-card .background-ins-card {
+/* position: absolute; */
 width: 100%;
-height: 100%;
+height: 80%;
 border-radius: 20px;
 top: 0;
 display: flex;
+/* background-color: red; */
 }
 .background-ins-card .ins-card-name{
-display: none;
+/* display: none; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+gap: 10px;
+height: 100%;
+width: 100%;
+/* background-color: red; */
 }
-.ins-card:hover .background-ins-card .ins-card-name{
+/* .ins-card .background-ins-card .ins-card-name{
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-end;
 width: 100%;
-color: white !important;
-height: 90%;
+color: black !important;
+height: 80%;
 width: 100%;
-}
+} */
 .ins-card-name h3,.ins-card-name p {
     cursor: pointer;
-    color: white;
+    color: black;
+}
+.ins-card-name h3{
+    font-size: 22px;
 }
 .ins-card img {
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-    object-fit: cover; /* Adjusts image to cover the container */
-    /* For best quality, ensure your images have high resolution to start with */
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color: #f39a36;
   }
   
