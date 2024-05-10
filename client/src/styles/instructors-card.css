@@ -1,0 +1,45 @@
+.ins-card {
+    height: 350px;
+    position: relative;
+    /* width: 300px; */
+    min-width: 43px;
+    max-width: 280px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.457);
+    margin-bottom: 40px;
+}
+.ins-card:hover .background-ins-card {
+    background: #43b4be2e;
+    background: linear-gradient(20deg,#43B4BE 0%, #43b4be70 30%, #86868620 100%);
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 20px;
+top: 0;
+display: flex;
+}
+.background-ins-card .ins-card-name{
+display: none;
+}
+.ins-card:hover .background-ins-card .ins-card-name{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+width: 100%;
+color: white !important;
+height: 90%;
+width: 100%;
+}
+.ins-card-name h3,.ins-card-name p {
+    cursor: pointer;
+    color: white;
+}
+.ins-card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* Adjusts image to cover the container */
+    /* For best quality, ensure your images have high resolution to start with */
+  }
+  
