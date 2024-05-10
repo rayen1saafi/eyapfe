@@ -4,13 +4,18 @@ import HomeHeader from "../Components/HomeHeader";
 import HomeFeatures from "../Components/HomeFeatures";
 import HomeAbout from "../Components/HomeAbout";
 import HomeCourses from "../Components/HomeCourses";
+
+import InstrctorHome from "../Components/InstrctorHome";
 const Home = () => {
+
   return (
     <>
       <HomeHeader />
       <HomeFeatures/>
       <HomeAbout/>
       <HomeCourses/>
+      <InstrctorHome/>
+    
     </>
   );
 };

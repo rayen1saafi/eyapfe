@@ -1,0 +1,48 @@
+.instractors {
+    width: 80%;
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+  }
+  .instractors .titre {
+    width: 450px;
+    height: 310px;
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .instractors .titre h3 {
+    color: #0175cd;
+    margin-top: 50px;
+  }
+  .instractors .titre1 {
+    width: 150px;
+    height: 310px;
+    margin-top: -60px;
+  }
+  .instractors .img {
+    position: absolute;
+    right: -130px;
+    top: 150px;
+    z-index: -10 !important;
+  }
+  .instractors .img img {
+    width: 170px;
+    opacity: 40%;
+  }
+  .instractors .img1 {
+    position: absolute;
+    right: -40px;
+    bottom: 140px;
+    z-index: -10 !important;
+  }
+  .instractors .img1 img {
+    width: 150px;
+    opacity: 40%;
+  }
