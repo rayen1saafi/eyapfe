@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     position: relative;
+    background-color: #fff9f5;
   }
   .instractors .titre {
     width: 450px;
@@ -18,7 +19,7 @@
     align-items: flex-start;
   }
   .instractors .titre h3 {
-    color: #0175cd;
+    color: #f39a36;
     margin-top: 50px;
   }
   .instractors .titre1 {
