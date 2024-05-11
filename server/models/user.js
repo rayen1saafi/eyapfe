@@ -16,13 +16,12 @@ const userSchema = new Schema({
   user_img: {
     type: String,
     default:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW6hmwoTYquPrdYd_DfDFnXxsM8RBTm4GvNLla16kpEg&s",
+      "https://e7.pngegg.com/pngimages/321/296/png-clipart-computer-icons-user-svg-free-customers-miscellaneous-text-thumbnail.png",
   },
   resetPasswordToken: { type: String },
   resetPasswordExpires: { type: Date },
   isActivated: { type: Boolean, default: false },
   activationToken: { type: String },
-
 });
 
 const User = mongoose.model("User", userSchema);
