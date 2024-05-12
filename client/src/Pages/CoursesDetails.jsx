@@ -128,6 +128,105 @@ const CoursesDetails = ({
         ?.filter((cour) => cour._id === id)
         .map((el) => (
           <div className="coursesdetails" key={el._id}>
+             <div className="listuser">
+              {users
+                ?.filter((e) => e._id == el?.instructor_id)
+                .map((user) => (
+                  <>
+                    <div className="instractor">
+                      <h2>Instructor</h2>
+                      <div className="img">
+                        <img src={user?.user_img} alt="" />
+                      </div>
+                      <h3>
+                        {user?.nom} {user?.prenom}
+                      </h3>
+                      <h5>@{user?.username}</h5>
+                      <div className="coursandStudent">
+                        <div className="continare">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="bi bi-book-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                          </svg>
+                          <p>
+                            {cours?.reduce(
+                              (count, el) =>
+                                el?.instructor_id &&
+                                user?._id === el?.instructor_id
+                                  ? count + 1
+                                  : count,
+                              0
+                            ) <= 1 ? (
+                              <>
+                                {cours?.reduce(
+                                  (count, el) =>
+                                    el?.instructor_id &&
+                                    user?._id === el?.instructor_id
+                                      ? count + 1
+                                      : count,
+                                  0
+                                )}{" "}
+                                cours
+                              </>
+                            ) : (
+                              <>
+                                {cours?.reduce(
+                                  (count, el) =>
+                                    el?.instructor_id &&
+                                    user?._id === el?.instructor_id
+                                      ? count + 1
+                                      : count,
+                                  0
+                                )}{" "}
+                                courses
+                              </>
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="button">
+                        <Link to={`/instructors/details/${user?._id}`}>
+                          View Profile
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                ))}
+              <div className="student">
+                <h2>Student List</h2>
+                {pack
+                  ?.filter((e) => e?._id == el?.pack_id)
+                  .map((e) => (
+                    <div className="student_content">
+                      {e.student.map((st) => (
+                        <div>
+                          {" "}
+                          {users
+                            ?.filter((user) => user?._id == st)
+                            .map((user) => (
+                              <>
+                                <div className="details">
+                                  <div className="img">
+                                    <img src={user?.user_img} alt="" />
+                                  </div>
+                                  <div className="fullname">
+                                    <h4>
+                                      {user?.nom} {user?.prenom}{" "}
+                                    </h4>
+                                    <p>@{user?.username} </p>
+                                  </div>
+                                </div>
+                              </>
+                            ))}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+              </div>
+            </div>
             <div className="coursesdetails_Content">
               <div className="coursesStudentDndHours">
                 {users
@@ -356,105 +455,7 @@ const CoursesDetails = ({
                 />
               </div>
             </div>
-            <div className="listuser">
-              {users
-                ?.filter((e) => e._id == el?.instructor_id)
-                .map((user) => (
-                  <>
-                    <div className="instractor">
-                      <h2>Instructor</h2>
-                      <div className="img">
-                        <img src={user?.user_img} alt="" />
-                      </div>
-                      <h3>
-                        {user?.nom} {user?.prenom}
-                      </h3>
-                      <h5>@{user?.username}</h5>
-                      <div className="coursandStudent">
-                        <div className="continare">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="bi bi-book-fill"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                          </svg>
-                          <p>
-                            {cours?.reduce(
-                              (count, el) =>
-                                el?.instructor_id &&
-                                user?._id === el?.instructor_id
-                                  ? count + 1
-                                  : count,
-                              0
-                            ) <= 1 ? (
-                              <>
-                                {cours?.reduce(
-                                  (count, el) =>
-                                    el?.instructor_id &&
-                                    user?._id === el?.instructor_id
-                                      ? count + 1
-                                      : count,
-                                  0
-                                )}{" "}
-                                cours
-                              </>
-                            ) : (
-                              <>
-                                {cours?.reduce(
-                                  (count, el) =>
-                                    el?.instructor_id &&
-                                    user?._id === el?.instructor_id
-                                      ? count + 1
-                                      : count,
-                                  0
-                                )}{" "}
-                                courses
-                              </>
-                            )}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="button">
-                        <Link to={`/instructors/details/${user?._id}`}>
-                          View Profile
-                        </Link>
-                      </div>
-                    </div>
-                  </>
-                ))}
-              <div className="student">
-                <h2>Student List</h2>
-                {pack
-                  ?.filter((e) => e?._id == el?.pack_id)
-                  .map((e) => (
-                    <div className="student_content">
-                      {e.student.map((st) => (
-                        <div>
-                          {" "}
-                          {users
-                            ?.filter((user) => user?._id == st)
-                            .map((user) => (
-                              <>
-                                <div className="details">
-                                  <div className="img">
-                                    <img src={user?.user_img} alt="" />
-                                  </div>
-                                  <div className="fullname">
-                                    <h4>
-                                      {user?.nom} {user?.prenom}{" "}
-                                    </h4>
-                                    <p>@{user?.username} </p>
-                                  </div>
-                                </div>
-                              </>
-                            ))}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-              </div>
-            </div>
+           
           </div>
         ))}
     </>

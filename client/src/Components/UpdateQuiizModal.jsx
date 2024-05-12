@@ -38,7 +38,7 @@ const UpdateQuiizModal = ({ e, reloadPage, setReloadPage }) => {
             <div className="create-Update_quizz-modal-content">
               <div className="c-File-m-title">
                 <div className="modale-title">
-                  <h2>Add File Form</h2>
+                  <h2>Update Quizz Form</h2>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

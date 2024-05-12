@@ -125,148 +125,152 @@ const QuizzStudent = ({ reloadPage, setReloadPage }) => {
                 <div className="quizz" key={index}>
                   {answersStudentLength != questionLength ? (
                     <>
-                      <div className="quizz">
-                        <div className="questionNumber"></div>
-                        {Array.isArray(questions) &&
-                          questions
-                            ?.filter((qu) => qu?.quizz_id === e?._id)
-                            .map(
-                              (qu, qIndex) =>
-                                qIndex === currentIndex && (
-                                  <React.Fragment key={qIndex}>
-                                    <div className="questionNumber">
-                                      <div className="divNumber">
-                                        {[...Array(questionLength)].map(
-                                          (_, step) => (
-                                            <div
-                                              className={
-                                                step <= qIndex
-                                                  ? "cc"
-                                                  : "content"
-                                              }
-                                              style={{
-                                                width: `${
-                                                  100 / questionLength - 1
-                                                }%`,
+                      <div className="allquizz">
+                        <div className="quizz">
+                          <div className="questionNumber"></div>
+                          {Array.isArray(questions) &&
+                            questions
+                              ?.filter((qu) => qu?.quizz_id === e?._id)
+                              .map(
+                                (qu, qIndex) =>
+                                  qIndex === currentIndex && (
+                                    <React.Fragment key={qIndex}>
+                                      <div className="questionNumber">
+                                        <div className="divNumber">
+                                          {[...Array(questionLength)].map(
+                                            (_, step) => (
+                                              <div
+                                                className={
+                                                  step <= qIndex
+                                                    ? "cc"
+                                                    : "content"
+                                                }
+                                                style={{
+                                                  width: `${
+                                                    100 / questionLength - 1
+                                                  }%`,
+                                                }}
+                                                key={step}
+                                              ></div>
+                                            )
+                                          )}
+                                        </div>
+                                        <div className="number">
+                                          <p>
+                                            QUESTION {qIndex + 1}/
+                                            {questionLength} :{" "}
+                                            {timeLeft > 0 && (
+                                              <>{timeLeft}seconds</>
+                                            )}
+                                            {timeLeft <= 0 && <>0 seconds</>}
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div className="questionTitre">
+                                        <h1>{qu.titre}</h1>
+                                      </div>
+
+                                      <div className="radio-input-wrapper1">
+                                        {Array.isArray(answers) &&
+                                          answers
+                                            ?.filter(
+                                              (an) => an?.question_id == qu?._id
+                                            )
+                                            .map((an) => (
+                                              <div className="rep" key={an._id}>
+                                                <label
+                                                  className="label"
+                                                  style={{
+                                                    backgroundColor:
+                                                      isValidateClicked &&
+                                                      selectedAnswer ===
+                                                        an._id &&
+                                                      an.isValidate
+                                                        ? "green"
+                                                        : isValidateClicked &&
+                                                          selectedAnswer ===
+                                                            an._id
+                                                        ? "red"
+                                                        : "",
+                                                  }}
+                                                >
+                                                  <input
+                                                    value={an._id}
+                                                    name="value-radio"
+                                                    id={an._id}
+                                                    className="radio-input"
+                                                    type="radio"
+                                                    disabled={isInputsDisabled} // Disable inputs if isInputsDisabled is true
+                                                    onChange={() =>
+                                                      setSelectedAnswer(an._id)
+                                                    }
+                                                    onClick={() =>
+                                                      setan_id(an?._id)
+                                                    }
+                                                  />
+                                                  <div className="radio-design"></div>
+                                                  <div className="label-text">
+                                                    {an.titre}
+                                                  </div>
+                                                </label>
+                                              </div>
+                                            ))}
+                                      </div>
+                                      <div className="quizzbutton">
+                                        {isAnswered || timeLeft <= 0 ? (
+                                          <>
+                                            {currentIndex <
+                                            questionLength - 1 ? (
+                                              <button
+                                                onClick={handleNextQuestion}
+                                              >
+                                                Next QUESTION
+                                              </button>
+                                            ) : (
+                                              <Link
+                                                to={`/quizzresult/${user?._id}/${e?._id}`}
+                                              >
+                                                <button
+                                                  onClick={() =>
+                                                    setReloadPage(!reloadPage)
+                                                  }
+                                                >
+                                                  View Result
+                                                </button>
+                                              </Link>
+                                            )}
+                                          </>
+                                        ) : (
+                                          <>
+                                            <button
+                                              onClick={() => {
+                                                handleValidate();
+                                                dispatch(
+                                                  createAnswerStudent({
+                                                    quizz_id: id,
+                                                    user_id: user?._id,
+                                                    question_id: qu?._id,
+                                                    answer_id: an_id,
+                                                  })
+                                                );
                                               }}
-                                              key={step}
-                                            ></div>
-                                          )
+                                            >
+                                              Validate
+                                            </button>
+                                            {timeLeft <= 0 && (
+                                              <button
+                                                onClick={handleNextQuestion}
+                                              >
+                                                Next QUESTION
+                                              </button>
+                                            )}
+                                          </>
                                         )}
                                       </div>
-                                      <div className="number">
-                                        <p>
-                                          QUESTION {qIndex + 1}/{questionLength}{" "}
-                                          :{" "}
-                                          {timeLeft > 0 && (
-                                            <>{timeLeft}seconds</>
-                                          )}
-                                          {timeLeft <= 0 && <>0 seconds</>}
-                                        </p>
-                                      </div>
-                                    </div>
-                                    <div className="questionTitre">
-                                      <h1>{qu.titre}</h1>
-                                    </div>
-
-                                    <div className="radio-input-wrapper">
-                                      {Array.isArray(answers) &&
-                                        answers
-                                          ?.filter(
-                                            (an) => an?.question_id == qu?._id
-                                          )
-                                          .map((an) => (
-                                            <div className="rep" key={an._id}>
-                                              <label
-                                                className="label"
-                                                style={{
-                                                  backgroundColor:
-                                                    isValidateClicked &&
-                                                    selectedAnswer === an._id &&
-                                                    an.isValidate
-                                                      ? "green"
-                                                      : isValidateClicked &&
-                                                        selectedAnswer ===
-                                                          an._id
-                                                      ? "red"
-                                                      : "",
-                                                }}
-                                              >
-                                                <input
-                                                  value={an._id}
-                                                  name="value-radio"
-                                                  id={an._id}
-                                                  className="radio-input"
-                                                  type="radio"
-                                                  disabled={isInputsDisabled} // Disable inputs if isInputsDisabled is true
-                                                  onChange={() =>
-                                                    setSelectedAnswer(an._id)
-                                                  }
-                                                  onClick={() =>
-                                                    setan_id(an?._id)
-                                                  }
-                                                />
-                                                <div className="radio-design"></div>
-                                                <div className="label-text">
-                                                  {an.titre}
-                                                </div>
-                                              </label>
-                                            </div>
-                                          ))}
-                                    </div>
-                                    <div className="quizzbutton">
-                                      {isAnswered || timeLeft <= 0 ? (
-                                        <>
-                                          {currentIndex < questionLength - 1 ? (
-                                            <button
-                                              onClick={handleNextQuestion}
-                                            >
-                                              Next QUESTION
-                                            </button>
-                                          ) : (
-                                            <Link
-                                              to={`/quizzresult/${user?._id}/${e?._id}`}
-                                            >
-                                              <button
-                                                onClick={() =>
-                                                  setReloadPage(!reloadPage)
-                                                }
-                                              >
-                                                View Result
-                                              </button>
-                                            </Link>
-                                          )}
-                                        </>
-                                      ) : (
-                                        <>
-                                          <button
-                                            onClick={() => {
-                                              handleValidate();
-                                              dispatch(
-                                                createAnswerStudent({
-                                                  quizz_id: id,
-                                                  user_id: user?._id,
-                                                  question_id: qu?._id,
-                                                  answer_id: an_id,
-                                                })
-                                              );
-                                            }}
-                                          >
-                                            Validate
-                                          </button>
-                                          {timeLeft <= 0 && (
-                                            <button
-                                              onClick={handleNextQuestion}
-                                            >
-                                              Next QUESTION
-                                            </button>
-                                          )}
-                                        </>
-                                      )}
-                                    </div>
-                                  </React.Fragment>
-                                )
-                            )}
+                                    </React.Fragment>
+                                  )
+                              )}
+                        </div>
                       </div>
                     </>
                   ) : (
@@ -294,136 +298,140 @@ const QuizzStudent = ({ reloadPage, setReloadPage }) => {
               ?.filter((e) => e?._id == id)
               .map((e, index) => (
                 <div className="quizz" key={index}>
-                  <div className="quizz">
-                    <div className="questionNumber"></div>
-                    {Array.isArray(questions) &&
-                      questions
-                        ?.filter((qu) => qu?.quizz_id === e?._id)
-                        .map(
-                          (qu, qIndex) =>
-                            qIndex === currentIndex && (
-                              <React.Fragment key={qIndex}>
-                                <div className="questionNumber">
-                                  <div className="divNumber">
-                                    {[...Array(questionLength)].map(
-                                      (_, step) => (
-                                        <div
-                                          className={
-                                            step <= qIndex ? "cc" : "content"
-                                          }
-                                          style={{
-                                            width: `${
-                                              100 / questionLength - 1
-                                            }%`,
+                  <div className="allquizz">
+                    <div className="quizz1">
+                      <div className="questionNumber"></div>
+                      {Array.isArray(questions) &&
+                        questions
+                          ?.filter((qu) => qu?.quizz_id === e?._id)
+                          .map(
+                            (qu, qIndex) =>
+                              qIndex === currentIndex && (
+                                <React.Fragment key={qIndex}>
+                                  <div className="questionNumber">
+                                    <div className="divNumber">
+                                      {[...Array(questionLength)].map(
+                                        (_, step) => (
+                                          <div
+                                            className={
+                                              step <= qIndex ? "cc" : "content"
+                                            }
+                                            style={{
+                                              width: `${
+                                                100 / questionLength - 1
+                                              }%`,
+                                            }}
+                                            key={step}
+                                          ></div>
+                                        )
+                                      )}
+                                    </div>
+                                    <div className="number">
+                                      <p>
+                                        QUESTION {qIndex + 1}/{questionLength} :{" "}
+                                        {timeLeft > 0 && <>{timeLeft}seconds</>}
+                                        {timeLeft <= 0 && <>0 seconds</>}
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="questionTitre">
+                                    <h1>{qu.titre}</h1>
+                                  </div>
+
+                                  <div className="radio-input-wrapper1">
+                                    {Array.isArray(answers) &&
+                                      answers
+                                        ?.filter(
+                                          (an) => an?.question_id == qu?._id
+                                        )
+                                        .map((an) => (
+                                          <div className="rep" key={an._id}>
+                                            <label
+                                              className="label"
+                                              style={{
+                                                backgroundColor:
+                                                  isValidateClicked &&
+                                                  selectedAnswer === an._id &&
+                                                  an.isValidate
+                                                    ? "green"
+                                                    : isValidateClicked &&
+                                                      selectedAnswer === an._id
+                                                    ? "red"
+                                                    : "",
+                                              }}
+                                            >
+                                              <input
+                                                value={an._id}
+                                                name="value-radio"
+                                                id={an._id}
+                                                className="radio-input"
+                                                type="radio"
+                                                disabled={isInputsDisabled} // Disable inputs if isInputsDisabled is true
+                                                onChange={() =>
+                                                  setSelectedAnswer(an._id)
+                                                }
+                                                onClick={() =>
+                                                  setan_id(an?._id)
+                                                }
+                                              />
+                                              <div className="radio-design"></div>
+                                              <div className="label-text">
+                                                {an.titre}
+                                              </div>
+                                            </label>
+                                          </div>
+                                        ))}
+                                  </div>
+                                  <div className="quizzbutton">
+                                    {isAnswered || timeLeft <= 0 ? (
+                                      <>
+                                        {currentIndex < questionLength - 1 ? (
+                                          <button onClick={handleNextQuestion}>
+                                            Next QUESTION
+                                          </button>
+                                        ) : (
+                                          <Link
+                                            to={`/quizzresult/${user?._id}/${e?._id}`}
+                                          >
+                                            <button
+                                              onClick={() =>
+                                                setReloadPage(!reloadPage)
+                                              }
+                                            >
+                                              View Result
+                                            </button>
+                                          </Link>
+                                        )}
+                                      </>
+                                    ) : (
+                                      <>
+                                        <button
+                                          onClick={() => {
+                                            handleValidate();
+                                            dispatch(
+                                              createAnswerStudent({
+                                                quizz_id: id,
+                                                user_id: user?._id,
+                                                question_id: qu?._id,
+                                                answer_id: an_id,
+                                              })
+                                            );
                                           }}
-                                          key={step}
-                                        ></div>
-                                      )
+                                        >
+                                          Validate
+                                        </button>
+                                        {timeLeft <= 0 && (
+                                          <button onClick={handleNextQuestion}>
+                                            Next QUESTION
+                                          </button>
+                                        )}
+                                      </>
                                     )}
                                   </div>
-                                  <div className="number">
-                                    <p>
-                                      QUESTION {qIndex + 1}/{questionLength} :{" "}
-                                      {timeLeft > 0 && <>{timeLeft}seconds</>}
-                                      {timeLeft <= 0 && <>0 seconds</>}
-                                    </p>
-                                  </div>
-                                </div>
-                                <div className="questionTitre">
-                                  <h1>{qu.titre}</h1>
-                                </div>
-
-                                <div className="radio-input-wrapper">
-                                  {Array.isArray(answers) &&
-                                    answers
-                                      ?.filter(
-                                        (an) => an?.question_id == qu?._id
-                                      )
-                                      .map((an) => (
-                                        <div className="rep" key={an._id}>
-                                          <label
-                                            className="label"
-                                            style={{
-                                              backgroundColor:
-                                                isValidateClicked &&
-                                                selectedAnswer === an._id &&
-                                                an.isValidate
-                                                  ? "green"
-                                                  : isValidateClicked &&
-                                                    selectedAnswer === an._id
-                                                  ? "red"
-                                                  : "",
-                                            }}
-                                          >
-                                            <input
-                                              value={an._id}
-                                              name="value-radio"
-                                              id={an._id}
-                                              className="radio-input"
-                                              type="radio"
-                                              disabled={isInputsDisabled} // Disable inputs if isInputsDisabled is true
-                                              onChange={() =>
-                                                setSelectedAnswer(an._id)
-                                              }
-                                              onClick={() => setan_id(an?._id)}
-                                            />
-                                            <div className="radio-design"></div>
-                                            <div className="label-text">
-                                              {an.titre}
-                                            </div>
-                                          </label>
-                                        </div>
-                                      ))}
-                                </div>
-                                <div className="quizzbutton">
-                                  {isAnswered || timeLeft <= 0 ? (
-                                    <>
-                                      {currentIndex < questionLength - 1 ? (
-                                        <button onClick={handleNextQuestion}>
-                                          Next QUESTION
-                                        </button>
-                                      ) : (
-                                        <Link
-                                          to={`/quizzresult/${user?._id}/${e?._id}`}
-                                        >
-                                          <button
-                                            onClick={() =>
-                                              setReloadPage(!reloadPage)
-                                            }
-                                          >
-                                            View Result
-                                          </button>
-                                        </Link>
-                                      )}
-                                    </>
-                                  ) : (
-                                    <>
-                                      <button
-                                        onClick={() => {
-                                          handleValidate();
-                                          dispatch(
-                                            createAnswerStudent({
-                                              quizz_id: id,
-                                              user_id: user?._id,
-                                              question_id: qu?._id,
-                                              answer_id: an_id,
-                                            })
-                                          );
-                                        }}
-                                      >
-                                        Validate
-                                      </button>
-                                      {timeLeft <= 0 && (
-                                        <button onClick={handleNextQuestion}>
-                                          Next QUESTION
-                                        </button>
-                                      )}
-                                    </>
-                                  )}
-                                </div>
-                              </React.Fragment>
-                            )
-                        )}
+                                </React.Fragment>
+                              )
+                          )}
+                    </div>
                   </div>
                 </div>
               ))}

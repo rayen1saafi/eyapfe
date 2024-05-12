@@ -76,10 +76,12 @@ const QuizzResult = ({ setReloadPage, reloadPage }) => {
                 <>
                   {questions
                     ?.filter((qu) => qu?.quizz_id == e?._id)
-                    .map((qu) => (
+                    .map((qu, i) => (
                       <>
                         <div className="questionTitre">
-                          <h1>{qu.titre}</h1>
+                          <h1 className="h1">
+                            Question N° {i + 1}: {qu.titre}
+                          </h1>
                         </div>
 
                         <div class="radio-input-wrapper">

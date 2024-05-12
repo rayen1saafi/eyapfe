@@ -51,7 +51,7 @@ const InstructorsCard = ({ e }) => {
       <div className="ins-card">
         {e.user_img == "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW6hmwoTYquPrdYd_DfDFnXxsM8RBTm4GvNLla16kpEg&s" ? 
       <>
-              <img src="https://d24q3ld97k5pkl.cloudfront.net/images/testimonial_logos/testimonial_male.png?_g_app_v_=4.4.7" alt="" />
+        <img src="https://d24q3ld97k5pkl.cloudfront.net/images/testimonial_logos/testimonial_male.png?_g_app_v_=4.4.7" alt="" />
 
       </>: <>
       <img src={e.user_img} alt="" />
@@ -63,11 +63,12 @@ const InstructorsCard = ({ e }) => {
             <h3>{e.nom} {e.prenom}</h3>
             <Link to={`/instructors/details/${e._id}`}>
               <p>view profile</p>
-              <Rating
+            
+            </Link>
+            <Rating
                 value={calculateAverageRating().stars}
                 edit={false} // Disable editing
               />
-            </Link>
           </div>
         </div>
       </div>
