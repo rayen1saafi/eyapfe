@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout, updateuser, userCurrent } from "../redux/userSlice/userSlice";
 import axios from "axios";
 
@@ -19,6 +19,7 @@ const Profile = ({ setReloadPage, reloadPage }) => {
   const [showimg, setshowimg] = useState(false);
   const [uploadedImage, setUploadedImage] = useState(null); // State to store uploaded image
   const [showload, setshowload] = useState(false);
+
   useEffect(() => {
     dispatch(userCurrent());
   }, [pingprofile]);
@@ -38,6 +39,8 @@ const Profile = ({ setReloadPage, reloadPage }) => {
   //   };
   // }
   const courses = useSelector((state) => state?.cours?.cours);
+  const packs = useSelector((state) => state.pack?.pack);
+
 
   // -------- upload profile image
   const [file, setFile] = useState(null);
@@ -109,7 +112,7 @@ const Profile = ({ setReloadPage, reloadPage }) => {
   // ---------- pagination --------------
     // Function to handle previous and next arrows for courses
     const [startIdx, setStartIdx] = useState(0);
-    const coursesPerPage = 2;
+    const coursesPerPage = 4;
     
     const handleNext = () => {
       setStartIdx(startIdx + coursesPerPage);
@@ -118,6 +121,8 @@ const Profile = ({ setReloadPage, reloadPage }) => {
     const handlePrevious = () => {
       setStartIdx(startIdx - coursesPerPage);
     };
+    const filteredPacks = packs?.filter((pack) => pack.student.includes(user?._id));
+
     return (
     <>
       {user?.isActivated == true ? (
@@ -233,10 +238,15 @@ const Profile = ({ setReloadPage, reloadPage }) => {
 
               {/* Display uploaded image */}
 
-              <h3>
-                {user?.nom} {user?.prenom}
-              </h3>
-              <p>@{user?.username}</p>
+              <div className="prof-name">
+                <h2>{user?.nom} {user?.prenom} </h2>(<p>
+                {user?.role == "user" ? <>
+              {" "}Student
+              </> : <>
+              {user?.role}
+              </>}
+              </p>)
+              </div>
               <p>{user?.email}</p>
               <div className="profile-phone">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-forward" viewBox="0 0 16 16">
@@ -246,36 +256,16 @@ const Profile = ({ setReloadPage, reloadPage }) => {
 {user?.phone == null ?  <p style={{color:"gray",marginBottom:"0"}}>+216 XX XXX XXX</p> :  <p style={{color:"gray",marginBottom:"0"}}>+216 {user?.phone}</p>
               }
               </div>
-              <h4 style={{color:"gray",paddingTop:"10px"}}>{user?.role == "user" ? <>
-              Student
-              </> : <>
-              {user?.role}
-              </>}</h4>
+             
              
              
             </div>
           </div>
-          <div className="cours-list-profile">
-            {filteredCourses
-              ?.slice(startIdx, startIdx + coursesPerPage)
-              .map((course) => (
-                <CoursIProfile key={course._id} el={course} />
-              ))}
-            {filteredCourses?.length > coursesPerPage && (
-              <div className="profile-navigation-arrows">
-                {startIdx > 0 && (
-                  <button onClick={handlePrevious}>&lt; </button>
-                )}
-                {startIdx + coursesPerPage < filteredCourses.length && (
-                  <button onClick={handleNext}> &gt;</button>
-                )}
-              </div>
-            )}
-          </div>
+        
         </div>
        
-    
-          <div className="userupdate">
+          <div className="cours-data-profile">
+             <div className="userupdate">
             <div className="titre">
               <h3>Edit Profile</h3>
             </div>
@@ -420,6 +410,57 @@ const Profile = ({ setReloadPage, reloadPage }) => {
               </button>
             </div>
           </div>
+          {user?.role == "user"?  
+          
+          <div className="packs-list-profile">
+        {filteredPacks
+          ?.slice(startIdx, startIdx + coursesPerPage)
+          .map((pack) => (
+            <div style={{width:"80%",display:"flex",alignItems:"center",justifyContent:"flex-start" , gap:"10px",marginTop:"20px"}}>
+            <img  style={{width:"30%",borderRadius:'20px'}}src={pack.pack_image} alt={pack.nom} className="pack-image" />
+            <div >
+              <Link to="/packs">
+              <h3 >{pack.nom}</h3>
+              </Link>
+              
+              {/* You can add more pack details here */}
+            </div>
+          </div>
+          ))}
+          
+        {filteredPacks?.length > coursesPerPage && (
+          <div className="profile-navigation-arrows">
+            {startIdx > 0 && (
+              <button onClick={handlePrevious}>&lt; </button>
+            )}
+            {startIdx + coursesPerPage < filteredPacks.length && (
+              <button onClick={handleNext}> &gt;</button>
+            )}
+          </div>
+        )}
+      </div> : 
+      <div className="cours-list-profile">
+      {filteredCourses
+        ?.slice(startIdx, startIdx + coursesPerPage)
+        .map((course) => (
+          <CoursIProfile key={course._id} el={course} />
+        ))}
+      {filteredCourses?.length > coursesPerPage && (
+        <div className="profile-navigation-arrows">
+          {startIdx > 0 && (
+            <button onClick={handlePrevious}>&lt; </button>
+          )}
+          {startIdx + coursesPerPage < filteredCourses.length && (
+            <button onClick={handleNext}> &gt;</button>
+          )}
+        </div>
+      )}
+    </div>
+      }
+        
+          
+          </div>
+         
         </div>
       ) : user?.isActivated == false ? (
         <div className="validateaccount">
