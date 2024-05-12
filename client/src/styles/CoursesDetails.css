@@ -1,0 +1,746 @@
+.coursesdetails {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.coursesdetails .coursesdetails_Content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/************coursesStudentDndHours**********************************/
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours {
+  width: 60%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours .det {
+  width: auto;
+  height: 100%;
+  margin-right: 10px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours .det .img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours .det .img img {
+  width: 100%;
+}
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours .det svg {
+  width: 20px;
+  fill: #f39a36;
+  margin-right: 10px;
+}
+.coursesdetails .coursesdetails_Content .coursesStudentDndHours .det p {
+  font-size: 18px;
+  width: max-content;
+}
+
+/************End coursesStudentDndHours**********************************/
+
+/************cours Description**********************************/
+
+.coursesdetails .coursesdetails_Content .coursDescription {
+  width: 98%;
+  height: auto;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
+  padding-bottom: 10px;
+}
+.coursesdetails .coursesdetails_Content .coursDescription p {
+  margin-top: 20px;
+  line-height: 35px;
+  text-align: justify;
+}
+/************ End cours Description**********************************/
+
+/************lessons**********************************/
+.coursesdetails .coursesdetails_Content .lessons {
+  width: 100%;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coursesdetails .coursesdetails_Content .lessons .addlesson {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
+}
+.coursesdetails .coursesdetails_Content .lessons .addlesson input {
+  width: 350px;
+  height: 40px;
+  border: none;
+  background-color: #f39b3679;
+  border-radius: 15px;
+  padding-left: 20px;
+}
+.coursesdetails .coursesdetails_Content .lessons .addlesson button {
+  width: 120px;
+  height: 40px;
+  background-color: #f39a36;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+  transition: 1s all ease;
+}
+.coursesdetails .coursesdetails_Content .lessons .addlesson button:hover {
+  background-color: #f39a36;
+}
+.coursesdetails .coursesdetails_Content .lessons .lesson_titre {
+  margin-top: 20px;
+  width: 92%;
+  background-color: #f39a36;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0 4%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f39b366f;
+  position: relative;
+}
+.lessons .lesson_titre .title-del {
+  /* background-color: red; */
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lessons .lesson_titre .title-del svg {
+  cursor: pointer;
+  fill: red;
+}
+.coursesdetails .coursesdetails_Content .lessons .lesson_titre p {
+  font-size: 23px;
+}
+.coursesdetails .coursesdetails_Content .lessons .lesson_titre button {
+  width: 80px;
+  height: 25px;
+  background-color: #f39a36;
+  border-radius: 15px;
+  border: 1px white solid;
+  position: absolute;
+  right: 60px;
+  transition: 1s all ease;
+}
+.coursesdetails .coursesdetails_Content .lessons .lesson_titre button:hover {
+  background-color: #ffffff7c;
+}
+.coursesdetails .coursesdetails_Content .lessons .lesson_titre svg {
+  width: 20px;
+}
+
+.coursesdetails .coursesdetails_Content .lessons .lessonContent {
+  width: 94%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.46);
+  transition: 0.2s;
+}
+
+.coursesdetails .coursesdetails_Content .lessons .lessonContent .cont {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.46);
+  margin-top: 10px;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .update {
+  width: max-content;
+  padding: 0 10px;
+  height: 40px;
+  background-color: #f39a36;
+  color: white;
+  font-weight: 600;
+  margin-right: 5px;
+  border-radius: 15px;
+  transition: 1s all ease;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .update:hover {
+  background-color: #f39a36;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .delete {
+  width: max-content;
+  padding: 0 10px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  margin-right: 5px;
+  transition: 1s all ease;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .delete:hover {
+  background-color: rgb(248, 138, 138);
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .view {
+  width: max-content;
+  padding: 0 10px;
+  height: 40px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: rgb(12, 131, 16);
+  transition: 1s all ease;
+}
+.mark {
+  width: 105px;
+  padding: 0 10px;
+  height: 40px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: rgb(110, 110, 110);
+  transition: 1s all ease;
+  margin-right: 10px;
+}
+.mark:hover {
+  color: black;
+  background-color: rgb(178, 178, 178);
+  transition: 1s all ease;
+}
+.done {
+  width: 105px;
+  padding: 0 10px;
+  height: 40px;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: #f39a36;
+  transition: 1s all ease;
+  margin-right: 10px;
+}
+.done:hover {
+  background-color: #f39a36;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .view:hover {
+  width: max-content;
+
+  background-color: rgb(40, 224, 46);
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .addlessons {
+  width: 100%;
+  /* background-color: red; */
+  height: 50px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center !important;
+  cursor: pointer;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .addlessons
+  .btn {
+  /* width: 120px;
+    height: 35px; */
+  background-color: transparent;
+  /* background-color: #0175cd; */
+  /* border-radius: 15px; */
+  /* border: 1px white solid; */
+  transition: 1s all ease;
+}
+.coursesdetails
+  .coursesdetails_Content
+  .lessons
+  .lessonContent
+  .cont
+  .FileContent
+  .titre {
+  width: max-content;
+  display: flex;
+}
+.coursesdetails .coursesdetails_Content .lessons .lessonContent .cont svg {
+  margin-right: 10px;
+}
+.coursesdetails .coursesdetails_Content .lessons .lessonContent .cont p {
+  font-size: 17px;
+  margin-right: 10px;
+}
+.coursesdetails .coursesdetails_Content .lessons .lessonContent .cont .span {
+  font-size: 15px;
+  margin-right: 10px;
+  color: gray;
+  width: 90px !important;
+}
+.coursesdetails .coursesdetails_Content .lessons .lessonContent .cont .span1 {
+  font-size: 15px;
+  margin-right: 10px;
+  color: gray;
+  width: 350px !important;
+}
+.coursesdetails .coursesdetails_Content .lessons .lessonContent1 {
+  width: 94%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(128, 128, 128, 0.46);
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s;
+}
+
+.coursesdetails .coursesdetails_Content .lessons .lessonContent1 .cont {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.46);
+  margin-bottom: 20px;
+}
+.coursesdetails .listuser {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-end;
+  margin-top: -50px;
+}
+.coursesdetails .listuser .instractor {
+  width: 90%;
+  height: 470px;
+  border: 1px solid rgba(128, 128, 128, 0.46);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 65px;
+  overflow: hidden;
+}
+.coursesdetails .listuser .instractor h2 {
+  margin-top: 20px;
+}
+.coursesdetails .listuser .instractor .img {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.coursesdetails .listuser .instractor .img img {
+  width: 100%;
+}
+.coursesdetails .listuser .instractor h3 {
+  margin-top: 20px;
+}
+.coursesdetails .listuser .instractor h5 {
+  margin-top: 5px;
+  color: rgb(176, 176, 176);
+}
+.coursesdetails .listuser .instractor .coursandStudent {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.coursesdetails .listuser .instractor .coursandStudent .continare {
+  width: auto;
+  height: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.coursesdetails .listuser .instractor .coursandStudent .continare svg {
+  margin-right: 10px;
+  fill: #f39a36;
+  width: 20px;
+}
+.coursesdetails .listuser .instractor .button {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.coursesdetails .listuser .instractor .button {
+  width: 70% !important;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f39a36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.5s all ease;
+}
+.coursesdetails .listuser .instractor .button a {
+  background-color: transparent;
+  width: 70% !important;
+  height: max-content;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 17px;
+  transition: 0.5s all ease;
+  text-align: center;
+  transition: 1s all ease;
+}
+.coursesdetails .listuser .instractor .button:hover {
+  width: 70% !important;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  background-color: #edb370;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.5s all ease;
+  text-align: center;
+}
+.coursesdetails .listuser .student {
+  padding: 20px 0;
+  width: 90%;
+  height: max-content;
+  max-height: 245px;
+  border: 1px solid rgba(128, 128, 128, 0.46);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  overflow: hidden;
+}
+.coursesdetails .listuser .student .student_content {
+  width: 100%;
+  overflow-y: scroll;
+}
+.coursesdetails .listuser .student .student_content .details {
+  width: 96%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 0 15px 4%;
+
+  border-bottom: 1px solid rgba(128, 128, 128, 0.46);
+}
+.coursesdetails .listuser .student .student_content .details .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.coursesdetails .listuser .student .student_content .details .img img {
+  width: 100%;
+}
+.coursesdetails .listuser .student .student_content .details .fullname {
+  width: max-content;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.coursesdetails .listuser .student .student_content .details .fullname p {
+  color: gray;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #1d1d1d;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 99999999999999;
+}
+.preloader_inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4em;
+  height: 4em;
+  line-height: 4em;
+  text-align: center;
+  font-size: 3em;
+  font-family: monospace;
+  font-weight: 300;
+  color: #333;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 4em;
+  line-height: 1em;
+  text-align: center;
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: 300;
+  color: #4e4e51;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 0.5s ease;
+}
+
+progress[value] {
+  --background: conic-gradient(#fb5f05 var(--p), #f3cca0 0);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--background);
+  -webkit-mask: radial-gradient(#0000 59%, #000 60% 70%, #0000 71%);
+}
+progress[value]::-webkit-progress-bar {
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  background: #0000;
+}
+progress[value]::-moz-progress-bar {
+  background: #0000;
+}
+
+.label {
+  --w: 50px; /* the width*/
+
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-grid;
+  place-content: center;
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.progress_ {
+  height: 30px;
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+.progress-done {
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  background: linear-gradient(to left, #f3bc7c, #f39a36);
+  color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 3px -5px #f39a36 #f2b46c, 0 2px 5px;
+  transition: 1s ease;
+}
+#addlesson {
+  margin-top: 20px;
+}
+.buttons {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.buttons .button1 {
+  width: 60px;
+  height: 40px;
+  background-color: green;
+  border-radius: 15px;
+  font-weight: 600;
+  color: white;
+  transition: 1s all ease;
+}
+.buttons .button1:hover {
+  background-color: rgb(17, 228, 17);
+}
+.buttons .button2 {
+  width: max-content;
+  margin-right: 5px;
+  height: 40px;
+  background-color: red;
+  border-radius: 15px;
+  font-weight: 600;
+  color: white;
+  transition: 1s all ease;
+  padding: 0 10px;
+  transition: 1s all ease;
+}
+.buttons .button2:hover {
+  background-color: rgba(255, 0, 0, 0.791);
+}
+.Meet {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #bc9f9f75;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #efefef;
+}
+.Meet h2 {
+  width: 360px;
+  color: #f39a36;
+}
+.Meet button {
+  width: 120px;
+  padding: 0 15px;
+  background-color: #f39a36;
+  transition: 1s all ease;
+  color: white;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 15px;
+}
+.Meet button:hover {
+  background-color: #e9b982;
+}
+.btnjoin {
+  background-color: gray !important;
+  transition: 1s all ease;
+}
+
+.btnjoin :hover {
+  background-color: rgb(208, 208, 208) !important;
+}
+.deleteMeet {
+  background-color: red !important;
+}
+.deleteMeet:hover {
+  background-color: rgb(244, 93, 93) !important;
+}
