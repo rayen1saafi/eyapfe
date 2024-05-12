@@ -33,19 +33,7 @@ const About = () => {
 
       <AboutContainer />
       
-      {/* <div className="instractors">
-        <h1>OUR INSTRUCTORS</h1>
-        <div className="instractor_content">
-          {users
-            ?.filter((user) => user?.role === "Instructor")
-            ?.map((e, i) => (
-              <>
-                <div style={{ display: "none" }}>{(i += 1)}</div>
-                {i < 5 ? <InstructorsCard e={e} /> : null}
-              </>
-            ))}
-        </div>
-      </div> */}
+
       
     </div>
   );

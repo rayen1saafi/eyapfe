@@ -225,7 +225,7 @@
   padding: 0 10px;
 
   height: 40px;
-  background-color: #183153;
+  background-color: #f68c14;
   color: white;
   font-weight: 600;
   border-radius: 15px;
@@ -233,7 +233,7 @@
   transition: 1s all ease;
 }
 #showbUtton:hover {
-  background-color: #f39a36;
+  background-color: #f7ab54;
 }
 .svggupdate {
   fill: rgb(18, 122, 226) !important;
@@ -249,7 +249,7 @@
   padding: 0 10px;
 
   height: 40px;
-  background-color: #183153;
+  background-color: #f68c14;
   color: white;
   font-weight: 600;
   border-radius: 15px;
@@ -257,7 +257,7 @@
   transition: 1s all ease;
 }
 #showbUtton:hover {
-  background-color: #0175cd;
+  background-color: #f8ba73;
 }
 .updatebutton {
   width: max-content;
