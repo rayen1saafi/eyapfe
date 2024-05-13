@@ -17,7 +17,7 @@ const CoursIProfile = ({el}) => {
 <div className="cours-profile-card">
     <img src={el?.cours_image} alt="" />
     <div className="cours-profile-card-pack">
-      <button>{packName?.map((pn) => <>STACK : {pn.nom}</>)}</button>
+      <button>{packName?.map((pn) => <h5>PACK : {pn.nom}</h5>)}</button>
       <Link to={`/cours/coursesdetails/${el?._id}`}>
       <h5>COURS : {el?.titre}</h5>
     </Link>
