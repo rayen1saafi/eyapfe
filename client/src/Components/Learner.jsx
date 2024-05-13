@@ -3,6 +3,7 @@ import "../styles/learner.css";
 import CreateInstructorModal from "./CreateInstructorModal";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteuser } from "../redux/userSlice/userSlice";
+import Headerdashboard from "./Headerdashboard";
 
 const Learner = ({ reloadPage, setReloadPage,search }) => {
   const [openModale, setopenModale] = useState(false);
@@ -12,7 +13,7 @@ const Learner = ({ reloadPage, setReloadPage,search }) => {
 
   return (
     <>
-   
+   <Headerdashboard/>
       {isVisible == true ? (
         <div
           class={isVisible == true ? "alert-box success1" : "alert-box success"}
