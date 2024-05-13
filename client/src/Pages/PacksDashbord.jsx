@@ -4,7 +4,7 @@ import PackageDashListe from "../Components/PackageDashListe";
 import Headerdashboard from "../Components/Headerdashboard";
 const PacksDashbord = ({ reloadPage, setReloadPage, search, setSearch }) => {
   return (
-    <>
+    <main>
       <Headerdashboard />
       <div className="packs-dashbord">
         <div className="pack-dash-container">
@@ -16,7 +16,7 @@ const PacksDashbord = ({ reloadPage, setReloadPage, search, setSearch }) => {
           />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

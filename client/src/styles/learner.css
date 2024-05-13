@@ -1,193 +1,203 @@
-.Instructor-dash-title{
-    width: 98%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .Instructor-d-title-container{
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .Instructor-d-title-container button{
-    background-color: #43B4BE;
-    width: 80px;
-    height: 40px;
-    color: #fff;
-    font-weight: 800;
-    border-radius: 10px;
-  }
-  .learner-container{
-    width: 100%;
-    /* background-color: red; */
-     display: flex;
-    align-items: center;
-    justify-content: end; 
-  
-    /* position: relative;
+main {
+  background-color: #f68d1429;
+}
+.Instructor-dash-title {
+  width: 98%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.Instructor-d-title-container {
+  width: 79.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #8080804e;
+}
+.Instructor-d-title-container button {
+  background-color: #f68c14;
+  width: 80px;
+  height: 40px;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.leaner {
+  width: 82%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 0 18%;
+}
+.learner-container {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position: relative;
     left: 0; */
-  }
-  .Learner {
-    width: 82%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid rgba(128, 128, 128, 0.534); */
-    border-bottom: none;
-    /* border-radius: 7px; */
-    overflow: hidden;
-  }
-  .Learner .titres {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(128, 128, 128, 0.1);
-    border-bottom: 1px solid rgba(128, 128, 128, 0.439);
-    display: flex;
-  }
-  .Learner .titres .fullname {
-    width: 29%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .titres .email {
-    width: 20%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .titres .dett {
-    width: 15%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .titres .actions {
-    width: 16%;
-  
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .userdetails {
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.439);
-    display: flex;
-  }
-  .Learner .userdetails .fullname {
-    width: 29%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .userdetails .fullname .userimg {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  .Learner .userdetails .fullname .userimg img {
-    width: 100%;
-  }
-  .Learner .userdetails .fullname .fullnamedetails {
-    height: 60%;
-    width: 80%;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .Learner .userdetails .fullname .fullnamedetails p {
-    font-weight: 400 !important;
-    color: gray;
-  }
-  .Learner .userdetails .email {
-    width: 20%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .userdetails .dett {
-    width: 15%;
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: gray;
-  }
-  .Learner .userdetails .actions {
-    width: 16%;
-  
-    padding-left: 1%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: gray;
-    font-weight: 600;
-  }
-  .Learner .userdetails .actions .views {
-    width: 70px;
-    height: 60%;
-    border-radius: 10px;
-    color: white;
-    font-size: 17px;
-    border: none;
-    transition: 1s all ease;
-    background-color: green;
-  }
-  .Learner .userdetails .actions .del {
-    width: 70px;
-    height: 60%;
-    border-radius: 10px;
-    color: white;
-    font-size: 17px;
-    border: none;
-    transition: 1s all ease;
-    background-color: red;
-  }
-  .Learner .userdetails .actions .views:hover {
-      background-color: rgba(0, 128, 0, 0.674);
-  
-  
-  }
-  .Learner .userdetails .actions .del:hover {
-      background-color: rgba(255, 0, 0, 0.564);
-  
-  }
+}
+.Learner {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid rgba(128, 128, 128, 0.534); */
+  border-bottom: none;
+  /* border-radius: 7px; */
+  overflow: hidden;
+}
+.Learner .titres {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+}
+.Learner .titres .fullname {
+  width: 29%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .titres .email {
+  width: 20%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .titres .dett {
+  width: 15%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .titres .actions {
+  width: 16%;
+
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .userdetails {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+}
+.Learner .userdetails .fullname {
+  width: 29%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .userdetails .fullname .userimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.Learner .userdetails .fullname .userimg img {
+  width: 100%;
+}
+.Learner .userdetails .fullname .fullnamedetails {
+  height: 60%;
+  width: 80%;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.Learner .userdetails .fullname .fullnamedetails p {
+  font-weight: 400 !important;
+  color: gray;
+}
+.Learner .userdetails .email {
+  width: 20%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .userdetails .dett {
+  width: 15%;
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+}
+.Learner .userdetails .actions {
+  width: 16%;
+
+  padding-left: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: gray;
+  font-weight: 600;
+}
+.Learner .userdetails .actions .views {
+  width: 70px;
+  height: 60%;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  border: none;
+  transition: 1s all ease;
+  background-color: #f68c14;
+}
+.Learner .userdetails .actions .del {
+  width: 70px;
+  height: 60%;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  border: none;
+  transition: 1s all ease;
+  background-color: red;
+}
+.Learner .userdetails .actions .views:hover {
+  background-color: #fab565;
+}
+.Learner .userdetails .actions .del:hover {
+  background-color: rgba(255, 0, 0, 0.564);
+}
