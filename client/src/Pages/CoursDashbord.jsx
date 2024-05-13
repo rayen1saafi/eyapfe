@@ -40,7 +40,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
         {!show ? (
           <>
             <h1 style={{ width: "78%", fontSize: "22px" }}> #Invitaion</h1>
-            <div className="learner-container">
+            <div className="learner-container1">
               <div className="Learner">
                 <div className="titres">
                   <div className="fullname">Learner</div>
@@ -135,7 +135,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
           <>
             <h1 style={{ width: "78%", fontSize: "22px" }}> #Student</h1>
 
-            <div className="learner-container">
+            <div className="learner-container1">
               <div className="Learner">
                 <div className="titres">
                   <div className="fullname">Learner</div>

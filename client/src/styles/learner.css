@@ -42,9 +42,20 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
   /* position: relative;
     left: 0; */
+}
+.learner-container1 {
+  width: 78%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: relative;
+    left: 0; */
+  border-bottom: 1.5px solid #f68c14;
+
+  margin: 0 20px;
 }
 .Learner {
   width: 95%;

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "../styles/FileDetails.css";
 import { useSelector } from "react-redux";
 import FileHeader from "../Components/FileHeader";
+import HomeHeader from "../Components/HomeHeader";
+import PagesHeader from "../Components/PagesHeader";
 
 const FileDetails = () => {
   const { file_id } = useParams();
@@ -14,7 +16,7 @@ const FileDetails = () => {
         ?.filter((file) => file._id === file_id)
         .map((file) => (
           <>
-            <FileHeader file={file} />
+            <PagesHeader />
             {file.file_type === "image" && (
               <div className="detailsimg" key={file._id}>
                 <img className="img" src={file.file} alt="Image" />
