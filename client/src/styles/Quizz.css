@@ -65,8 +65,8 @@
   justify-content: center;
 }
 .quizz .questionTitre h1 {
-  color: #ffffff;
-  font-size: 70px !important;
+  color: black;
+  font-size: 50px !important;
   width: max-content;
   text-align: center;
 }
@@ -288,7 +288,7 @@
 }
 
 .label-text {
-  color: #1e3048;
+  color: black;
   margin-left: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -360,7 +360,7 @@
 .msgquizz button:hover {
   background-color: #ffffff;
 
-  color: #1e3048;
+  color: black;
 }
 .svg1 {
   margin-left: 10px;
