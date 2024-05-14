@@ -6,8 +6,8 @@ import "../styles/StudentListeAnswerModal.css";
 export const StudentListeAnswerModal = ({ e, setReloadPage, reloadPage }) => {
   const [show, setShow] = useState(false);
   const questions = useSelector((state) => state?.question?.questions);
-  const filteredQuestions = questions.filter((qu) => qu.quizz_id === e._id);
-  const questionLength = filteredQuestions.length;
+  const filteredQuestions = questions?.filter((qu) => qu.quizz_id === e._id);
+  const questionLength = filteredQuestions?.length;
   const answersStudent = useSelector((state) => state?.answerstudent?.answerstudent);
   const users = useSelector((state) => state.user?.users);
 
@@ -20,7 +20,7 @@ export const StudentListeAnswerModal = ({ e, setReloadPage, reloadPage }) => {
         <div className="student_list">
           <div className="list">
             {users?.map((user) => {
-              const userAnswers = answersStudent.filter(
+              const userAnswers = answersStudent?.filter(
                 (answer) => answer.quizz_id === e._id && answer.user_id === user._id
               );
               const answeredQuestionCount = userAnswers.length;
