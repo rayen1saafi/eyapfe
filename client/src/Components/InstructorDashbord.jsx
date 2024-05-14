@@ -68,7 +68,7 @@ const InstructorDashbord = ({ reloadPage, setReloadPage, search }) => {
                   <div className="fullname">
                     <div className="userimg">
                       <img
-                        src="https://media.licdn.com/dms/image/C4E03AQEEZUPHzQoE0A/profile-displayphoto-shrink_400_400/0/1623677348445?e=2147483647&v=beta&t=4yBsLbVOvjpli7F64hdqdgYCNg6KkkCwqV8WIHW-YZA"
+                        src={e.user_img}
                         alt=""
                       />
                     </div>
@@ -87,7 +87,6 @@ const InstructorDashbord = ({ reloadPage, setReloadPage, search }) => {
                     <div className="dett">false</div>
                   )}
                   <div className="actions">
-                    <button className="views">Views</button>
                     <button
                       className="del"
                       onClick={() => {

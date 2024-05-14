@@ -57,10 +57,7 @@ const Learner = ({ reloadPage, setReloadPage, search }) => {
                 <div className="userdetails" key={e.id}>
                   <div className="fullname">
                     <div className="userimg">
-                      <img
-                        src="https://media.licdn.com/dms/image/C4E03AQEEZUPHzQoE0A/profile-displayphoto-shrink_400_400/0/1623677348445?e=2147483647&v=beta&t=4yBsLbVOvjpli7F64hdqdgYCNg6KkkCwqV8WIHW-YZA"
-                        alt=""
-                      />
+                      <img src={e.user_img} alt="" />
                     </div>
                     <div className="fullnamedetails">
                       <h4>
@@ -77,7 +74,6 @@ const Learner = ({ reloadPage, setReloadPage, search }) => {
                     <div className="dett">Waiting</div>
                   )}
                   <div className="actions">
-                    <button className="views">Views</button>
                     <button
                       className="del"
                       onClick={() => {

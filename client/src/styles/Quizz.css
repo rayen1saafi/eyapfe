@@ -10,7 +10,7 @@
 .quizz {
   width: 100%;
   height: auto;
-  background: linear-gradient(168.6deg, #f5aa55 20.8%, #fcc17d 70.8%);
+  background: linear-gradient(168.6deg, #ffd2a0 20.8%, #fee2c2 70.8%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,6 +75,8 @@
   text-align: left;
   border-radius: 50px;
   font-size: 30px !important;
+  color: #1a1a1a;
+  font-size: 17px;
 }
 
 .quizz .quizzRep {
