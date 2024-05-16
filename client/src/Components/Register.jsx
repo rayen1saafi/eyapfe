@@ -126,7 +126,7 @@ const Register = ({ show, setShow }) => {
         />
                 <div className="pass-input-div">
                 <label style={{ color: "red" }}>{passwordError}</label>
-                  {showPassword ?          <input
+                  {!showPassword ?          <input
           type="text"
           placeholder="Password"
           onChange={(e) =>
@@ -173,7 +173,7 @@ const Register = ({ show, setShow }) => {
             </div>
 
             <p className="login-bottom-p">
-              Already have an account? <Link to="/login">Login</Link>
+              Already have an account? <Link style={{color:'black'}} to="/login">Login</Link>
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@
 .quizz {
   width: 100%;
   height: auto;
-  background: linear-gradient(168.6deg, #f5aa55 20.8%, #fcc17d 70.8%);
+  background: linear-gradient(168.6deg, #ffd2a0 20.8%, #fee2c2 70.8%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,8 +65,8 @@
   justify-content: center;
 }
 .quizz .questionTitre h1 {
-  color: #ffffff;
-  font-size: 70px !important;
+  color: black;
+  font-size: 50px !important;
   width: max-content;
   text-align: center;
 }
@@ -75,6 +75,8 @@
   text-align: left;
   border-radius: 50px;
   font-size: 30px !important;
+  color: #1a1a1a;
+  font-size: 17px;
 }
 
 .quizz .quizzRep {
@@ -286,7 +288,7 @@
 }
 
 .label-text {
-  color: #1e3048;
+  color: black;
   margin-left: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -358,7 +360,7 @@
 .msgquizz button:hover {
   background-color: #ffffff;
 
-  color: #1e3048;
+  color: black;
 }
 .svg1 {
   margin-left: 10px;

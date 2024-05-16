@@ -1,615 +1,613 @@
 .profile {
-    width: 85%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-  }
-  .profile .userdetailles {
-    width: 100%;
-    height: auto;
-    padding-bottom: 28px;
-    background-color: #f39b3646;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-  }
-  .profile .userdetailles .cov {
-    width: 100%;
-    height: 340px;
-    overflow: hidden;
-    background-position: center;
-  }
-  .profile .userdetailles .cov img {
-    width: 100%;
-    height: 100%;
-  }
-  .profile .userdetailles .photoProfile {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-  
-    border-radius: 50%;
-    top: 275px;
-    left: 50px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
-    background-color: #dde4ec;
-  }
-  .profile .userdetailles .upload {
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    background-color: #dde4ec00;
-    border-radius: 50%;
-    top: 350px;
-    left: 50px;
-    z-index: 99;
-    border: 1px solid rgba(255, 255, 255, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s all ease;
-  }
-  .profile .userdetailles .upload svg {
-    fill: rgba(255, 255, 255, 0);
-    transition: 0.5s all ease;
-  }
-  .profile .userdetailles:hover .upload {
-    background-color: #f39b36c8;
-    border: 1px solid white;
-  }
-  .profile .userdetailles:hover .upload svg {
-    fill: white;
-  }
-  .profile .userdetailles:hover .upload:hover svg {
-    fill: #f39b3665;
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.profile .userdetailles {
+  width: 100%;
+  height: auto;
+  padding-bottom: 28px;
+  background-color: #f39b3646;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.profile .userdetailles .cov {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  background-position: center;
+}
+.profile .userdetailles .cov img {
+  width: 100%;
+  height: 100%;
+}
+.profile .userdetailles .photoProfile {
+  position: absolute;
+  width: 120px;
+  height: 120px;
 
-  }
-  .profile .userdetailles .photoProfile img {
-    width: 120%;
-   
-  }
-  .profile .userdetailles .content {
-    margin-top: 20px;
-    width: 65%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .profile .userdetailles .content .prof-name {
-    color: #f39b36;
-    width: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    gap: 5px;
-  }
-  .prof-name h2 {
-    color: #f39b36;
-    font-size: 17px;
-  }
-  .prof-name p{
-    color: gray;
-    margin-bottom: 0px !important;
+  border-radius: 50%;
+  top: 275px;
+  left: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  background-color: #dde4ec;
+}
+.profile .userdetailles .upload {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-color: #dde4ec00;
+  border-radius: 50%;
+  top: 350px;
+  left: 50px;
+  z-index: 99;
+  border: 1px solid rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease;
+}
+.profile .userdetailles .upload svg {
+  fill: rgba(255, 255, 255, 0);
+  transition: 0.5s all ease;
+}
+.profile .userdetailles:hover .upload {
+  background-color: #f39b36c8;
+  border: 1px solid white;
+}
+.profile .userdetailles:hover .upload svg {
+  fill: white;
+}
+.profile .userdetailles:hover .upload:hover svg {
+  fill: #f39b3665;
+}
+.profile .userdetailles .photoProfile img {
+  width: 120%;
+}
+.profile .userdetailles .content {
+  margin-top: 20px;
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.profile .userdetailles .content .prof-name {
+  color: #f39b36;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.prof-name h2 {
+  color: #f39b36;
+  font-size: 17px;
+}
+.prof-name p {
+  color: gray;
+  margin-bottom: 0px !important;
+}
+.profile .userdetailles .content p {
+  margin-bottom: 20px;
+}
+.profile .userupdate {
+  width: 60%;
+  height: 680px;
+  background-color: #f39b3646;
+  border-radius: 15px;
+  /* margin-top: 120px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.profile .userupdate .titre {
+  width: 98%;
+  height: 80px;
+  display: flex;
+  padding-left: 2%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile .userupdate .fullname {
+  width: 96%;
+  padding: 2%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.profile .userupdate .fullname .fullname_content {
+  width: 33%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.profile .userupdate .fullname .fullname_content label {
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 15px;
+}
+.profile .userupdate .fullname .fullname_content input {
+  width: 93%;
+  padding-left: 3%;
+  background-color: transparent;
+  outline: none;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.549);
+}
+.profile .userupdate .email_Phone {
+  width: 96%;
+  padding: 2%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+}
+.profile .userupdate .email_Phone .emailPhone_content {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.profile .userupdate .email_Phone .emailPhone_content label {
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 15px;
+}
+.profile .userupdate .email_Phone .emailPhone_content input {
+  width: 96%;
+  padding-left: 2%;
+  background-color: transparent;
+  outline: none;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.549);
+}
+.profile .userupdate .password {
+  width: 96%;
+  padding: 2%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0px;
+  position: relative;
+}
+.profile .userupdate .password svg {
+  position: absolute;
+  top: 57%;
+  right: 30px;
+}
+.profile .userupdate .password .password_content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.profile .userupdate .password .password_content label {
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 15px;
+}
+.profile .userupdate .password .password_content input {
+  width: 97%;
+  padding-left: 2%;
+  background-color: transparent;
+  outline: none;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.549);
+}
 
-  }
-  .profile .userdetailles .content p {
-    margin-bottom: 20px;
-  }
-  .profile .userupdate {
-    width: 60%;
-    height: 680px;
-    background-color: #f39b3646;
-    border-radius: 15px;
-    /* margin-top: 120px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-  }
-  .profile .userupdate .titre {
-    width: 98%;
-    height: 80px;
-    display: flex;
-    padding-left: 2%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .profile .userupdate .fullname {
-    width: 96%;
-    padding: 2%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0px;
-  }
-  .profile .userupdate .fullname .fullname_content {
-    width: 33%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-  }
-  .profile .userupdate .fullname .fullname_content label {
-    margin-bottom: 10px;
-    color: gray;
-    font-size: 15px;
-  }
-  .profile .userupdate .fullname .fullname_content input {
-    width: 93%;
-    padding-left: 3%;
-    background-color: transparent;
-    outline: none;
-    height: 38px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.549);
-  }
-  .profile .userupdate .email_Phone {
-    width: 96%;
-    padding: 2%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0;
-  }
-  .profile .userupdate .email_Phone .emailPhone_content {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-  }
-  .profile .userupdate .email_Phone .emailPhone_content label {
-    margin-bottom: 10px;
-    color: gray;
-    font-size: 15px;
-  }
-  .profile .userupdate .email_Phone .emailPhone_content input {
-    width: 96%;
-    padding-left: 2%;
-    background-color: transparent;
-    outline: none;
-    height: 38px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.549);
-  }
-  .profile .userupdate .password {
-    width: 96%;
-    padding: 2%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0px;
-    position: relative;
-  }
-  .profile .userupdate .password svg {
-    position: absolute;
-    top: 57%;
-    right: 30px;
-  }
-  .profile .userupdate .password .password_content {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-  }
-  .profile .userupdate .password .password_content label {
-    margin-bottom: 10px;
-    color: gray;
-    font-size: 15px;
-  }
-  .profile .userupdate .password .password_content input {
-    width: 97%;
-    padding-left: 2%;
-    background-color: transparent;
-    outline: none;
-    height: 38px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.549);
-  }
-  
-  .profile .userupdate .Update {
-    width: 96%;
-    padding: 2%;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .profile .userupdate .Update button {
-    width: 150px;
-    height: 35px;
-    background-color: #f39a36;
-    color: white;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: 1s all ease;
-  }
-  .profile .userupdate .Update button:hover {
-    background-color: #f39b3691;
-  }
-  .profile .userupdate .description {
-    width: 96%;
-    padding: 2%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0px;
-    position: relative;
-  }
-  
-  .profile .userupdate .description .description_content {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-  }
-  .profile .userupdate .description .description_content label {
-    margin-bottom: 10px;
-    color: gray;
-    font-size: 15px;
-  }
-  .profile .userupdate .description .description_content textarea {
-    width: 97%;
-    padding-left: 2%;
-    background-color: transparent;
-    outline: none;
-    height: 108px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.549);
-  }
-  .profile .alert-box {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    position: fixed;
-    z-index: 11 !important;
-  }
-  
-  .profile .success {
-    color: #3c763d;
-    background-color: #48ff00;
-  
-    display: none;
-  }
-  .profile .success1 {
-    color: #ffffff;
-    background-color: #1fd270;
-    display: flex;
-    width: 97%;
-    padding-left: 3%;
-    top: 0;
-  }
-  
-  .profile .warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-    display: none;
-  }
-  .profile .warning1 {
-    color: white;
-    background-color: #f72828;
-    display: flex;
-    width: 97%;
-    padding-left: 3%;
-    top: 0;
-  }
-  
-  .profile .imagedisplay {
-    z-index: 11;
-    background-color: rgba(0, 0, 0, 0.563);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .profile .imagedisplay .img {
-    width: 400px;
-    height: 400px;
-    background-color: rgb(133, 133, 133);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative;
-  }
-  .profile .imagedisplay .img .back{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.431);
-    width: 100%;
-    height: 100%;
-  }
-  .profile .imagedisplay .img .loader {
-    width: 80px;
-    height: 50px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-  }
-  .profile .imagedisplay .img .loader .loader-text {
-    top: 0;
-    padding: 0;
-    margin: 0;
-    color: #0175cd;
-    animation: text_713 3.5s ease both infinite;
-    font-size: 0.8rem;
+.profile .userupdate .Update {
+  width: 96%;
+  padding: 2%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile .userupdate .Update button {
+  width: 150px;
+  height: 35px;
+  background-color: #f39a36;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 1s all ease;
+}
+.profile .userupdate .Update button:hover {
+  background-color: #f39b3691;
+}
+.profile .userupdate .description {
+  width: 96%;
+  padding: 2%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.profile .userupdate .description .description_content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.profile .userupdate .description .description_content label {
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 15px;
+}
+.profile .userupdate .description .description_content textarea {
+  width: 97%;
+  padding-left: 2%;
+  background-color: transparent;
+  outline: none;
+  height: 108px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.549);
+}
+.profile .alert-box {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: fixed;
+  z-index: 11 !important;
+}
+
+.profile .success {
+  color: #3c763d;
+  background-color: #48ff00;
+
+  display: none;
+}
+.profile .success1 {
+  color: #ffffff;
+  background-color: #1fd270;
+  display: flex;
+  width: 97%;
+  padding-left: 3%;
+  top: 0;
+}
+
+.profile .warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  display: none;
+}
+.profile .warning1 {
+  color: white;
+  background-color: #f72828;
+  display: flex;
+  width: 97%;
+  padding-left: 3%;
+  top: 0;
+}
+
+.profile .imagedisplay {
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.563);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.profile .imagedisplay .img {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(133, 133, 133);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+.profile .imagedisplay .img .back {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.431);
+  width: 100%;
+  height: 100%;
+}
+.profile .imagedisplay .img .loader {
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.profile .imagedisplay .img .loader .loader-text {
+  top: 0;
+  padding: 0;
+  margin: 0;
+  color: #f39a36;
+  animation: text_713 3.5s ease both infinite;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.profile .imagedisplay .img .loader .load {
+  background-color: #f39a36;
+  border-radius: 50px;
+  display: block;
+  height: 16px;
+  width: 16px;
+  bottom: 0;
+  position: absolute;
+  transform: translateX(64px);
+  animation: loading_713 3.5s ease both infinite;
+}
+
+.profile .imagedisplay .img .loader .load::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #f39a36;
+  border-radius: inherit;
+  animation: loading2_713 3.5s ease both infinite;
+}
+
+@keyframes text_713 {
+  0% {
     letter-spacing: 1px;
+    transform: translateX(0px);
   }
-  
-  .profile .imagedisplay .img .loader .load {
-    background-color: #3f9fe8;
-    border-radius: 50px;
-    display: block;
-    height: 16px;
+
+  40% {
+    letter-spacing: 2px;
+    transform: translateX(26px);
+  }
+
+  80% {
+    letter-spacing: 1px;
+    transform: translateX(32px);
+  }
+
+  90% {
+    letter-spacing: 2px;
+    transform: translateX(0px);
+  }
+
+  100% {
+    letter-spacing: 1px;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes loading_713 {
+  0% {
     width: 16px;
-    bottom: 0;
-    position: absolute;
+    transform: translateX(0px);
+  }
+
+  40% {
+    width: 100%;
+    transform: translateX(0px);
+  }
+
+  80% {
+    width: 16px;
     transform: translateX(64px);
-    animation: loading_713 3.5s ease both infinite;
   }
-  
-  .profile .imagedisplay .img .loader .load::before {
-    position: absolute;
-    content: "";
+
+  90% {
     width: 100%;
-    height: 100%;
-    background-color: #0175cd;
-    border-radius: inherit;
-    animation: loading2_713 3.5s ease both infinite;
+    transform: translateX(0px);
   }
-  
-  @keyframes text_713 {
-    0% {
-      letter-spacing: 1px;
-      transform: translateX(0px);
-    }
-  
-    40% {
-      letter-spacing: 2px;
-      transform: translateX(26px);
-    }
-  
-    80% {
-      letter-spacing: 1px;
-      transform: translateX(32px);
-    }
-  
-    90% {
-      letter-spacing: 2px;
-      transform: translateX(0px);
-    }
-  
-    100% {
-      letter-spacing: 1px;
-      transform: translateX(0px);
-    }
+
+  100% {
+    width: 16px;
+    transform: translateX(0px);
   }
-  
-  @keyframes loading_713 {
-    0% {
-      width: 16px;
-      transform: translateX(0px);
-    }
-  
-    40% {
-      width: 100%;
-      transform: translateX(0px);
-    }
-  
-    80% {
-      width: 16px;
-      transform: translateX(64px);
-    }
-  
-    90% {
-      width: 100%;
-      transform: translateX(0px);
-    }
-  
-    100% {
-      width: 16px;
-      transform: translateX(0px);
-    }
+}
+
+@keyframes loading2_713 {
+  0% {
+    transform: translateX(0px);
+    width: 16px;
   }
-  
-  @keyframes loading2_713 {
-    0% {
-      transform: translateX(0px);
-      width: 16px;
-    }
-  
-    40% {
-      transform: translateX(0%);
-      width: 80%;
-    }
-  
-    80% {
-      width: 100%;
-      transform: translateX(0px);
-    }
-  
-    90% {
-      width: 80%;
-      transform: translateX(15px);
-    }
-  
-    100% {
-      transform: translateX(0px);
-      width: 16px;
-    }
+
+  40% {
+    transform: translateX(0%);
+    width: 80%;
   }
-  .profile .imagedisplay .img img {
-    object-fit: fill;
+
+  80% {
     width: 100%;
+    transform: translateX(0px);
   }
-  .profile .imagedisplay .btns {
-    width: 200px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-around;
+
+  90% {
+    width: 80%;
+    transform: translateX(15px);
   }
-  .profile .imagedisplay .btns .btn1 {
-    width: 70px;
-    height: 70px;
-    background-color: #52e896;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s all ease;
+
+  100% {
+    transform: translateX(0px);
+    width: 16px;
   }
-  .profile .imagedisplay .btns .btn2 {
-    width: 70px;
-    height: 70px;
-    background-color: rgb(243, 75, 75);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s all ease;
-  }
-  .profile .imagedisplay .btns svg {
-    fill: white;
-  }
-  .profile .imagedisplay .btns .btn1:hover {
-    background-color: #0c9b4d;
-  }
-  .profile .imagedisplay .btns .btn2:hover {
-    background-color: red;
-  }
-  
-  
-  .profile-detail-cours{
-    width: 100%;
-    height: 447px;
-  }
-  .cours-list-profile {
-    /* background-color: red; */
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 680px;
-    background-color: #f39b3646;
-    border-radius: 15px;
-  
-  }
-  .cours-list-profile-container{
-    /* display: flex;
+}
+.profile .imagedisplay .img img {
+  object-fit: fill;
+  width: 100%;
+}
+.profile .imagedisplay .btns {
+  width: 200px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.profile .imagedisplay .btns .btn1 {
+  width: 70px;
+  height: 70px;
+  background-color: #52e896;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s all ease;
+}
+.profile .imagedisplay .btns .btn2 {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(243, 75, 75);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s all ease;
+}
+.profile .imagedisplay .btns svg {
+  fill: white;
+}
+.profile .imagedisplay .btns .btn1:hover {
+  background-color: #0c9b4d;
+}
+.profile .imagedisplay .btns .btn2:hover {
+  background-color: red;
+}
+
+.profile-detail-cours {
+  width: 100%;
+  height: 447px;
+}
+.cours-list-profile {
+  /* background-color: red; */
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 680px;
+  background-color: #f39b3646;
+  border-radius: 15px;
+}
+.cours-list-profile-container {
+  /* display: flex;
     align-items: center;
     justify-content: center; */
-    margin-top: 20px;
-  }
-  
-  .cours-list-profile img {
-    width: 90%;
-  }
-    .packs-list-profile {
-    /* background-color: red; */
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 680px;
-    background-color: #f39b3646;
-    border-radius: 15px;
-    overflow-y: scroll;
-  }
-  .packs-list-profile::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-  }
-  
-  .packs-list-profile::-webkit-scrollbar-track {
-    background: transparent; /* Transparent background */
-  }
-  
-  .packs-list-profile::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners */
-  }
-  
-  .packs-list-profile::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb on hover */
-  }
-  .show-more-cours-p {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .show-more-cours-p button {
-    width: 100%;
-    background-color: #0175cd;
-    height: 100%;
-    border-radius: 10px;
-    color: white;
-    font-weight: 800;
-  }
-  
-  
-  .profile-phone{
+  margin-top: 20px;
+}
+
+.cours-list-profile img {
+  width: 90%;
+}
+.packs-list-profile {
+  /* background-color: red; */
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 680px;
+  background-color: #f39b3646;
+  border-radius: 15px;
+  overflow-y: scroll;
+}
+.packs-list-profile::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.packs-list-profile::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background */
+}
+
+.packs-list-profile::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.packs-list-profile::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Color of the scrollbar thumb on hover */
+}
+.show-more-cours-p {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show-more-cours-p button {
+  width: 100%;
+  background-color: #0175cd;
+  height: 100%;
+  border-radius: 10px;
+  color: white;
+  font-weight: 800;
+}
+
+.profile-phone {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  }
-  
-  .profile-navigation-arrows {
-    /* background-color: red; */
-    margin-bottom: 20px;
-    display: flex;
-    width: 74%;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .profile-navigation-arrows button{
-    padding: 1%;
-    background-color: #dde4ef29;
-    color: #f39a36;
-    border-radius: 50px;
-    border: 1px solid gray;
+}
 
-  }
+.profile-navigation-arrows {
+  /* background-color: red; */
+  margin-bottom: 20px;
+  display: flex;
+  width: 74%;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-navigation-arrows button {
+  padding: 1%;
+  background-color: #dde4ef29;
+  color: #f39a36;
+  border-radius: 50px;
+  border: 1px solid gray;
+}
 
-  .cours-data-profile {
-    width: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    margin-top: 50px;
-  }
+.cours-data-profile {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 50px;
+}

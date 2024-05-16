@@ -3,6 +3,7 @@ import CourDashListe from "../Components/CourDashListe";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateinscri, updatestudent } from "../redux/packSlice/packSlice";
+import Headerdashboard from "../Components/Headerdashboard";
 
 const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
   const [show, setshow] = useState(false);
   return (
     <>
+      <Headerdashboard />
       <div className="cours-dashbord">
         <div className="cour-dash-container">
           <CourDashListe
@@ -38,7 +40,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
         {!show ? (
           <>
             <h1 style={{ width: "78%", fontSize: "22px" }}> #Invitaion</h1>
-            <div className="learner-container">
+            <div className="learner-container1">
               <div className="Learner">
                 <div className="titres">
                   <div className="fullname">Learner</div>
@@ -61,7 +63,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
                                   <div className="fullname">
                                     <div className="userimg">
                                       <img
-                                        src="https://media.licdn.com/dms/image/C4E03AQEEZUPHzQoE0A/profile-displayphoto-shrink_400_400/0/1623677348445?e=2147483647&v=beta&t=4yBsLbVOvjpli7F64hdqdgYCNg6KkkCwqV8WIHW-YZA"
+                                        src={user?.user_img}
                                         alt=""
                                       />
                                     </div>
@@ -133,7 +135,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
           <>
             <h1 style={{ width: "78%", fontSize: "22px" }}> #Student</h1>
 
-            <div className="learner-container">
+            <div className="learner-container1">
               <div className="Learner">
                 <div className="titres">
                   <div className="fullname">Learner</div>
@@ -155,11 +157,7 @@ const CoursDashbord = ({ reloadPage, setReloadPage, search }) => {
                                 <div className="userdetails" key={e.id}>
                                   <div className="fullname">
                                     <div className="userimg">
-                                      
-                                      <img
-                                        src={user?.user_img}
-                                        alt=""
-                                      />
+                                      <img src={user?.user_img} alt="" />
                                     </div>
                                     <div className="fullnamedetails">
                                       <h4>

@@ -94,6 +94,7 @@
     bottom: 35px;
     cursor: pointer;
     outline: none;
+    
   }
   
   form button[type='submit'] {

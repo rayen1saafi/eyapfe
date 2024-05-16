@@ -78,7 +78,7 @@ userRouter.post("/register", registerRules(), Validation, async (req, res) => {
       "
     >
       <img
-        src="https://i.postimg.cc/fTm1hbKC/navbar-logo.png"
+        src="https://i.postimg.cc/5NWvj40k/navbarlogo.jpg"
         alt="Your Alt Text"
         style="width: 150px; height: auto; margin: 0 auto"
       />
@@ -94,7 +94,7 @@ userRouter.post("/register", registerRules(), Validation, async (req, res) => {
     color: white;
     border-radius: 30px;
     border: none;
-    background-color: #0175CD;
+    background-color: #f68c14;
   "
 >
   Link
@@ -167,7 +167,7 @@ userRouter.post("/addInstructor", async (req, res) => {
       align-items: center;
       justify-content: center;
        color:black
-      >
+      
     
       <div
       style="
@@ -180,15 +180,15 @@ userRouter.post("/addInstructor", async (req, res) => {
       "
     >
       <img
-        src="https://i.postimg.cc/fTm1hbKC/navbar-logo.png"
+        src="https://i.postimg.cc/5NWvj40k/navbarlogo.jpg"
         alt="Your Alt Text"
         style="width: 150px; height: auto; margin: 0 auto"
       />
     </div>
-      <
+      
       
 <h4 style="width:100%;text-align:center;color:black">
-We invite you to become an Instructor. <br>  password: <span style="color: #0175CD;">${password}</span>.
+We invite you to become an Instructor. <br>  password: <span style="color: #f68c14;">${password}</span>.
 
 
 
@@ -392,7 +392,7 @@ userRouter.post("/forgot-password", async (req, res) => {
       "
     >
       <img
-        src="https://i.postimg.cc/fTm1hbKC/navbar-logo.png"
+        src="https://i.postimg.cc/5NWvj40k/navbarlogo.jpg"
         alt="Your Alt Text"
         style="width: 150px; height: auto; margin: 0 auto"
       />
@@ -408,7 +408,7 @@ userRouter.post("/forgot-password", async (req, res) => {
     color: white;
     border-radius: 30px;
     border: none;
-    background-color: #0175CD;
+    background-color: #f68c14;
   "
 >
   Link
@@ -464,7 +464,7 @@ userRouter.post("/reset-password/:token", async (req, res) => {
 userRouter.put("/:id/rating", async (req, res) => {
   try {
     const { id } = req.params;
-    const { rating,user_id } = req.body;
+    const { rating, user_id } = req.body;
 
     // Find the instructor by ID and update the rating
     const instructor = await User.findByIdAndUpdate(

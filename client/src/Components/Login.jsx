@@ -89,7 +89,7 @@ const Login = ({ show, setShow }) => {
       value={login.email}
       onChange={(e) => setLogin({ ...login, email: e.target.value })}
     />                <div className="pass-input-div">
-           {showPassword ?      <input
+           {!showPassword ?      <input
       type="password"
       placeholder="PASSWORD"
       value={login.password}
@@ -145,7 +145,7 @@ const Login = ({ show, setShow }) => {
         </div>
 
         <p className="login-bottom-p">
-          Don't have an account? <Link to="/Register">SignUp</Link>
+          Don't have an account? <Link style={{color:'black'}} to="/Register">SignUp</Link>
         </p>
       </div>
     </div>

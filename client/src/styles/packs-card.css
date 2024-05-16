@@ -1,0 +1,116 @@
+.packs-card {
+  height: 350px;
+  /* width: 300px; */
+  /* background-color: green; */
+  box-shadow: 0px 3px 15px #f39a36;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  max-width: 380px;
+  min-width: 360px;
+}
+.packs-card2 {
+  height: 350px;
+  /* width: 300px; */
+  /* background-color: green; */
+  background-color: #f39a36;
+  box-shadow: 0px 3px 15px #f39a36;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  max-width: 380px;
+  min-width: 360px;
+}
+.packs-card:hover {
+  background-color: #f39a36;
+}
+.packs-card img {
+  width: 90%;
+  height: 200px;
+}
+.packs-card a {
+  width: 90%;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.packs-card2 img {
+  width: 90%;
+  height: 200px;
+}
+.packs-card2 a {
+  width: 90%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.16);
+  padding: 20px 0;
+  cursor: pointer;
+}
+.packs-card-cours {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 7px 0;
+}
+.packs-card-cours span {
+  font-size: 15px;
+  font-weight: 800;
+  /* padding:15px 0; */
+}
+.course-days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.pack-days {
+  /* width: 90%; */
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+  align-items: center;
+  padding-top: 5px;
+}
+.p-c-num {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnwiting {
+  background-color: #f39a36;
+  width: 80px;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  border-radius: 0px 50px 0px 50px;
+  padding: 10px 20px;
+  transition: 1s all ease;
+}
+.packs-card:hover .btnwiting {
+  background-color: #f8f1e9;
+}
+.btnainscr {
+  background-color: #f39a36;
+  width: max-content;
+  padding: 5px 0;
+  border-radius: 0px 50px 0px 50px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+.packs-card:hover .btnainscr {
+  background-color: #f8f1e9;
+}
+
+.pack-title-inscri-btn {
+  /* background-color: red; */
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #f39a36;
+}

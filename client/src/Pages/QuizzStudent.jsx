@@ -123,7 +123,7 @@ const QuizzStudent = ({ reloadPage, setReloadPage }) => {
               ?.filter((e) => e?._id == id)
               .map((e, index) => (
                 <div className="quizz" key={index}>
-                  {answersStudentLength != questionLength ? (
+                  {answersStudentLength < questionLength ? (
                     <>
                       <div className="allquizz">
                         <div className="quizz">
