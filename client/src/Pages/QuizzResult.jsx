@@ -76,91 +76,88 @@ const QuizzResult = ({ setReloadPage, reloadPage }) => {
                 <>
                   {questions
                     ?.filter((qu) => qu?.quizz_id == e?._id)
-                    .map((qu, i) => (
+                    .map((qu) => (
                       <>
                         <div className="questionTitre">
-                          <h1 className="h1">
-                            Question N° {i + 1}: {qu.titre}
-                          </h1>
+                          <h1>{qu.titre}</h1>
                         </div>
 
                         <div class="radio-input-wrapper">
-                          {answersStudent
-                            ?.filter(
-                              (ans) =>
-                                ans?.question_id == qu?._id &&
-                                ans?.user_id == user_id
-                            )
-                            .map((ans) => (
+                          <>
+                            {Array.isArray(answers) ? (
                               <>
-                                {Array.isArray(answers) ? (
-                                  <>
-                                    {answers
-                                      ?.filter(
-                                        (an) => an?.question_id == qu?._id
-                                      )
-                                      .map((an) => (
-                                        <div className="rep">
-                                          <label
-                                            className="label"
-                                            id={
-                                              (an.isValidate == true &&
-                                                ans?.answer_id == an?._id) ||
-                                              an.isValidate == true
-                                                ? "labelgreen"
-                                                : an.isValidate == false &&
-                                                  ans?.answer_id == an?._id
-                                                ? "labelred"
-                                                : "labelwhite"
-                                            }
-                                          >
-                                            {/* <input
-                                        value="value-2"
-                                        name="value-radio"
-                                        id="value-2"
-                                        class="radio-input"
-                                        type="radio"
-                                      /> */}
-                                            <div class="radio-design"></div>
-                                            <div class="label-text">
-                                              {an.titre}
-                                            </div>
-                                          </label>
-                                        </div>
-                                      ))}
-                                    <>
+                                {answers
+                                  ?.filter((an) => an?.question_id == qu?._id)
+                                  .map((an, i) => (
+                                    <div className="rep">
+                                      <label
+                                        className="label"
+                                        id={
+                                          (an.isValidate == true &&
+                                            answersStudent?.filter(
+                                              (e) =>
+                                                e.answer_id == an._id &&
+                                                user_id == e.user_id
+                                            ).length > 0) ||
+                                          an.isValidate == true
+                                            ? "labelgreen"
+                                            : an.isValidate == false &&
+                                              answersStudent?.filter(
+                                                (e) =>
+                                                  e.answer_id == an._id &&
+                                                  user_id == e.user_id
+                                              ).length > 0
+                                            ? "labelred"
+                                            : "labelwhite"
+                                        }
+                                      >
+                                        <div class="radio-design"></div>
+                                        <div class="label-text">{an.titre}</div>
+                                      </label>
+                                      <>
+                                        {(an.isValidate == true &&
+                                          answersStudent?.filter(
+                                            (e) =>
+                                              e.answer_id == an._id &&
+                                              user_id == e.user_id
+                                          ).length > 0) ||
+                                        an.isValidate == true ? (
+                                          <></>
+                                        ) : an.isValidate == false &&
+                                          answersStudent?.filter(
+                                            (e) =>
+                                              e.answer_id == an._id &&
+                                              user_id == e.user_id
+                                          ).length > 0 ? (
+                                          <></>
+                                        ) : null}
+                                      </>
+                                    </div>
+                                  ))}
+                                <>
+                                  {answersStudent
+                                    ?.filter(
+                                      (e) =>
+                                        e.answer_id == "" &&
+                                        e.question_id == qu._id &&
+                                        e.answer_id == ""
+                                    )
+                                    .map((e) => (
                                       <p
                                         style={{
-                                          fontSize: "30px",
+                                          fontSize: "20px",
                                           color: "red",
                                         }}
                                       >
-                                        {user?.role == "user" ? (
-                                          <>
-                                            {ans?.answer_id == "" && (
-                                              <>
-                                                You did not answer this question
-                                              </>
-                                            )}
-                                          </>
-                                        ) : (
-                                          <>
-                                            {ans?.answer_id == "Instructor" && (
-                                              <>
-                                                User did not answer this
-                                                question
-                                              </>
-                                            )}
-                                          </>
-                                        )}
+                                        No answer to this question
                                       </p>
-                                    </>
-                                  </>
-                                ) : (
-                                  <></>
-                                )}
+                                    ))}
+                                </>
                               </>
-                            ))}
+                            ) : (
+                              <></>
+                            )}
+                          </>
 
                           <br />
                           <br />
