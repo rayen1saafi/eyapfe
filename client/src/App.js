@@ -184,6 +184,7 @@ function App() {
               />
             }
           />
+          {/* ------- dashbord ----- */}
           <Route
             path="cours/coursesdetails/:id"
             element={
