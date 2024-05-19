@@ -139,18 +139,24 @@ const QuizzResult = ({ setReloadPage, reloadPage }) => {
                                     ?.filter(
                                       (e) =>
                                         e.answer_id == "" &&
-                                        e.question_id == qu._id &&
-                                        e.answer_id == ""
+                                        e.question_id == qu._id
                                     )
-                                    .map((e) => (
-                                      <p
-                                        style={{
-                                          fontSize: "20px",
-                                          color: "red",
-                                        }}
-                                      >
-                                        No answer to this question
-                                      </p>
+                                    .map((e, i) => (
+                                      <>
+                                        <div style={{ display: "none" }}>
+                                          {(i += 1)}
+                                        </div>
+                                        {i <= 1 && (
+                                          <p
+                                            style={{
+                                              fontSize: "20px",
+                                              color: "red",
+                                            }}
+                                          >
+                                            No answer to this question
+                                          </p>
+                                        )}
+                                      </>
                                     ))}
                                 </>
                               </>

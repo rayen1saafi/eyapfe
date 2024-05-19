@@ -43,6 +43,8 @@ import Contact from "./Pages/Contact.jsx";
 import About from "./Pages/About.jsx";
 import Registerpage from "./Pages/Registerpage.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
+import LoginPrivateRoutes from "./routes/LoginPrivateRoutes.js";
+import DashboardPrivate from "./routes/DashboardPrivate.js";
 
 // --------------------end importation------------------
 function App() {
@@ -80,18 +82,32 @@ function App() {
 
   return (
     <div>
-      {location.pathname.includes("/dashbord") && user?.role == "admin" ? 
+      {location.pathname.includes("/dashbord") && user?.role == "admin" ? (
         <>
           <SideBar search={search} setSearch={setSearch} />
         </>
-       : <Navbar/>}
+      ) : (
+        <Navbar />
+      )}
 
       <div className="app">
         <Routes>
+          <Route path="/" element={<Home />} /> {/* home route */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           {/* home route */}
-          <Route path="/Register" element={<Registerpage />} />{" "}
-          <Route path="/Login" element={<LoginPage />} /> {/* Register route */}
-          <Route path="/" element={<Home />} /> {/* Register route */}
+          {/* forgot password */}
+          <Route element={<LoginPrivateRoutes />}>
+            <Route path="/reset-password/:token" element={<Reset_password />} />
+            {/* forgotpassword */}
+            <Route path="/forgotpassword" element={<Forgotpassword />} />
+            {/* reset instructors */}
+            <Route path="/Register" element={<Registerpage />} />{" "}
+            <Route path="/Login" element={<LoginPage />} />{" "}
+            {/* Register route */}
+          </Route>
+                    <Route element={<PrivateRoute />}>
+
           <Route
             path="/profile"
             element={
@@ -125,12 +141,6 @@ function App() {
           {/* Packs route */}
           <Route path="/verify-account/:token" element={<Verifyaccount />} />
           {/*verification compte */}
-          <Route path="/forgotpassword" element={<Forgotpassword />} />
-          {/* forgot password */}
-          <Route path="/reset-password/:token" element={<Reset_password />} />
-          {/* forgotpassword */}
-          <Route path="/forgotpassword" element={<Forgotpassword />} />
-          {/* reset instructors */}
           <Route path="/instructors" element={<Instructors />} />
           <Route
             path="/instructors/details/:id"
@@ -141,50 +151,6 @@ function App() {
               />
             }
           />
-          {/* ------------ dashbord--------------------- */}
-          <Route
-            path="dashbord/packs"
-            element={
-              <PacksDashbord
-                reloadPage={reloadPage}
-                setReloadPage={setReloadPage}
-                search={search}
-                setSearch={setSearch}
-              />
-            }
-          />
-          <Route
-            path="dashbord/learner"
-            element={
-              <Learner
-                reloadPage={reloadPage}
-                setReloadPage={setReloadPage}
-                search={search}
-                setSearch={setSearch}
-              />
-            }
-          />
-          <Route
-            path="dashbord/Instructor"
-            element={
-              <InstructorDashbord
-                search={search}
-                reloadPage={reloadPage}
-                setReloadPage={setReloadPage}
-              />
-            }
-          />
-          <Route
-            path="dashbord/cours/:id"
-            element={
-              <CoursDashbord
-                reloadPage={reloadPage}
-                setReloadPage={setReloadPage}
-                search={search}
-              />
-            }
-          />
-          {/* ------- dashbord ----- */}
           <Route
             path="cours/coursesdetails/:id"
             element={
@@ -225,8 +191,53 @@ function App() {
           />
           <Route path="fileDetails/:file_id" element={<FileDetails />} />
           <Route path="/meet/:id" element={<Meet />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+          </Route>
+          {/* ------------ dashbord--------------------- */}
+          <Route element={<DashboardPrivate />}>
+            <Route
+              path="dashbord/packs"
+              element={
+                <PacksDashbord
+                  reloadPage={reloadPage}
+                  setReloadPage={setReloadPage}
+                  search={search}
+                  setSearch={setSearch}
+                />
+              }
+            />
+            <Route
+              path="dashbord/learner"
+              element={
+                <Learner
+                  reloadPage={reloadPage}
+                  setReloadPage={setReloadPage}
+                  search={search}
+                  setSearch={setSearch}
+                />
+              }
+            />
+            <Route
+              path="dashbord/Instructor"
+              element={
+                <InstructorDashbord
+                  search={search}
+                  reloadPage={reloadPage}
+                  setReloadPage={setReloadPage}
+                />
+              }
+            />
+            <Route
+              path="dashbord/cours/:id"
+              element={
+                <CoursDashbord
+                  reloadPage={reloadPage}
+                  setReloadPage={setReloadPage}
+                  search={search}
+                />
+              }
+            />
+          </Route>
+          {/* ------- dashbord ----- */}
         </Routes>
       </div>
 
