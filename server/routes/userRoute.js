@@ -7,7 +7,6 @@ const nodemailer = require("nodemailer");
 const jwt = require("jsonwebtoken");
 const {
   loginRules,
-
   registerRules,
   EditRules,
   Validation,
@@ -264,7 +263,7 @@ userRouter.post("/login", loginRules(), Validation, async (req, res) => {
     const token = await jwt.sign(payload, process.env.SecretOrKey, {
       expiresIn: 1000 * 3600 * 24,
     });
-    console.log(token);
+    // console.log(token);
     //send the user
     res
       .status(200)

@@ -160,7 +160,7 @@ const Navbar = () => {
                   <span
                     onClick={() => {
                       dispatch(logout());
-                      navigate("/register");
+                      navigate("/login");
                       setshowLogout(!showLogout);
                     }}
                   >
