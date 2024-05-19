@@ -108,7 +108,7 @@ const SideBar = ({setSearch,search}) => {
             <button
               onClick={() => {
                 dispatch(logout());
-                navigate("/register");
+                navigate("/login");
               }}
             >
               Log Out

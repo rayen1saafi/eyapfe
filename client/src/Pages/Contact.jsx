@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/contact.css";
 import PagesHeader from "../Components/PagesHeader";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(
+      "service_t4qcmpo",
+      "template_ok52u2j",
+      form.current,
+      "HbRPENSDO5BsrGq7W"
+    );
+    e.target.reset();
+  };
   return (
     <>
       <PagesHeader />
@@ -55,17 +67,17 @@ const Contact = () => {
         <div className="contactpart2">
           <h2>Send us email</h2>
           <h1>Feel Free to write</h1>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="inputs">
-              <input type="text" placeholder="Enter Name" />
-              <input type="email" placeholder="Enter Email" />
+              <input name="name"  type="text" placeholder="Enter Name" />
+              <input type="email" name="email" placeholder="Enter Email" />
             </div>
             <div className="inputs">
-              <input type="text" placeholder="Enter Name" />
-              <input type="email" placeholder="Enter Email" />
+              <input  name="lastname" type="text" placeholder="Enter Lastname" />
+              <input name="phone"   type="number" placeholder="Enter Phone number" />
             </div>
             <div className="inputs">
-              <textarea name="" id="" placeholder="Enter Message"></textarea>
+              <textarea name="message" id="" placeholder="Enter Message" ></textarea>
             </div>
 
             <button>Send Message</button>
