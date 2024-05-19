@@ -47,6 +47,7 @@ const QuizzStudent = ({ reloadPage, setReloadPage }) => {
     }
   };
 
+  const questionss = questions?.filter((e) => e.quizz_id == id);
   const handleEndOfQuiz = () => {
     // Dispatch empty answer ID if time is up and no answer is selected
     if (!isAnswered) {
@@ -54,7 +55,7 @@ const QuizzStudent = ({ reloadPage, setReloadPage }) => {
         createAnswerStudent({
           quizz_id: id,
           user_id: user?._id,
-          question_id: questions[currentIndex]?._id,
+          question_id: questionss[currentIndex]?._id,
           answer_id: "", // Empty answer ID
         })
       );
